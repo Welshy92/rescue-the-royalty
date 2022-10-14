@@ -5,7 +5,7 @@ Rescue The Royalty is a responsive browser based game created using Javascript.
 ![Image from amiresponsive](/assets/testing-images/amiresponsive.png)
 Image from [Am I Responsive?](https://ui.dev/amiresponsive)
  
-[Windows Simplified live on GitHub Pages](https://welshy92.github.io/rescue-the-royalty/)
+[Rescue The Royalty live on GitHub Pages](https://welshy92.github.io/rescue-the-royalty/)
  
 ## **CONTENTS**
 
@@ -21,16 +21,28 @@ Image from [Am I Responsive?](https://ui.dev/amiresponsive)
  
 ### Initial Discussion
  
-#### Key information for the site
+Rescue The Royalty at it's core is a very basic version of what you would expect to see in the combat of a classic turn based JRPG game. It contains a few basic mechancis, such as HP, various attacks (some can do double, half or no damage at all dependant on the enemy the user faces), and a basic healing spell. The aim is using a combination of attacks and healing to defeat the enemy before it defeats you. The game contains various random elements to keep the playing guessing and offer some replayablility.
  
 ### **User Stories**
  
 #### Client Goals
+
+* To be able to view and interact with the site on multiple different devices.
+* To have the need for strategising their choices to win the fights.
+* To be able to see how many wins or defeats they have during their current play session.
+* To be able to view the games instructions at any point.
  
 #### First Time Visitor Goals
- 
+
+* I want to know how the game works. 
+* I want to test my strategic mind.
+* I want to know how best to defeat my enemies.
+
 #### Returning Visitor Goals
  
+* I want to further challenge myself.
+* I want to read the instructions again.
+
 ***
 ## **Design**
  
