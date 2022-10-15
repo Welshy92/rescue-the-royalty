@@ -1,4 +1,7 @@
-@import url();
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Roboto+Mono&family=Silkscreen:wght@700&display=swap');
+/* font-family: 'Bitter', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Silkscreen', cursive; */
 
 * {
     margin: 0px;
@@ -9,20 +12,22 @@ background-color: black;
 color: rgb(255, 255, 255);
 }
 
-/* Setting the positioning and size of the content */
+/* Setting the positioning, colours and size of the content */
 
 #title {
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
     padding-top: 10px;
-    font-size: 2em;
+    font-size: 1.3em;
+    font-family: 'Silkscreen', cursive;
 }
 
 #game-area {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 500px;
     max-width: 90%;
     padding: 25px;
@@ -38,10 +43,22 @@ color: rgb(255, 255, 255);
     max-height: 50%;
 }
 
-@media screen and (min-width: 820px) {
-    #game-logo {
-        max-height: 350px;
-    }
+#intro-lore {
+    font-family: 'Bitter', serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+#start-game {
+    font-family: 'Roboto Mono', monospace;
+    padding: 10px;
+}
+
+#look-below {
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #score-box {
@@ -64,12 +81,17 @@ color: rgb(255, 255, 255);
     flex-direction: column;
     align-items: center;
     max-width: 90%;
-    padding: 25px;
+    padding: 15px;
     margin-left: 10%;
     margin-right: 10%;
     border: 1px;
     border-style: solid;
     border-color: aliceblue;
+}
+
+#instructions {
+    font-family: 'Bitter', serif;
+    text-align: center;
 }
 
 #type-chart {
@@ -81,6 +103,20 @@ color: rgb(255, 255, 255);
     align-items: center;
 }
 
+#read-again {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* Media queries to help things scale at high widths */
+
+@media screen and (min-width: 820px) {
+    #game-logo {
+        max-height: 350px;
+    }
+}
+
 @media screen and (min-width: 550px) {
     #type-img {
         width: 75%;
@@ -88,9 +124,13 @@ color: rgb(255, 255, 255);
         max-height: 500px;
         object-fit: contain;
     }
+
+    #title {
+        font-size: 2em;
+    }
 }
 
-/* Mobile sizing and positioning */
+/* Media queries to help things scale at low widths */
 
 @media screen and (max-width: 500px) {
     #game-area {
@@ -98,5 +138,10 @@ color: rgb(255, 255, 255);
         width: 95%;
         margin: 1px;
         padding: 5px;
+    }
+}
+@media screen and (max-width: 520px) {
+    #look-below {
+        font-size: 12px;
     }
 }
