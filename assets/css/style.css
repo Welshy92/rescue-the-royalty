@@ -1,4 +1,36 @@
+@import url();
+
+* {
+    margin: 0px;
+}
+
 body {
 background-color: black;
 color: rgb(255, 255, 255);
+}
+
+/* Setting the positioning and size of the content */
+#game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    padding: 25px;
+    margin: 10%;
+    border: 1px;
+    border-style: solid;
+    border-color: aliceblue;
+}
+
+#game-logo {
+    width: 100%;
+}
+
+/* Mobile sizing and positioning */
+
+@media screen and (max-width: 500px) {
+    #game-area {
+        width: 98%;
+        margin: 1px;
+    }
 }
