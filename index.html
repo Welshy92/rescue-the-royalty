@@ -17,8 +17,12 @@
         <div>
             <p id="intro-lore">The heir to the throne of Royaltopia has gone missing. Without them the whole of society may become destabalized! You have been assigned to go out into the wilds to search for them. Good luck hero!</p>
         </div>
-        <div>
-            <button id="start-game" data-type="submit">Let's go save the world!</button>
+        <div id="user-data">
+            <form id="user-name" action="" method="POST" onsubmit="handleSubmite(event);">
+                <label for="user">Enter the hero's name here!</label>
+                <input type="text" name="user" id="user" required>
+                <button id="start-game" data-type="submit" type="submit">Let's go save the world!</button>
+            </form>
         </div>
         <div>
             <p id="look-below"><i class="fa-solid fa-arrow-down arrow"></i> Check out the instructions below! <i class="fa-solid fa-arrow-down arrow"></i></p>

@@ -2,13 +2,25 @@
 document.addEventListener ("DOMContentLoaded", function() {
 })
 
-// Clicking the start-game button will start the game.
-let startGame = document.getElementById("start-game");
-startGame.addEventListener("click", function() {
-    console.log("START THE GAME ALREADY!");
-    battleStart();
+// Submitting a hero name will start the game.
 
-})
+let heroName = [];
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let userName = userForm.elements["user"].value;
+
+    if (userName.length < 5) {
+        alert("Please make sure your hero name is at least 5 characters long")
+    } else {
+        heroName.push(userForm.elements["user"].value);
+        console.log("HERO NAME:", userName);
+        battleStart();
+    }
+}
+  
+let userForm = document.getElementById("user-name");
+userForm.addEventListener("submit", handleSubmit);
 
 let battleScreen = document.getElementById("game-area");
 
