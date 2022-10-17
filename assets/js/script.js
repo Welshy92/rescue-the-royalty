@@ -9,14 +9,26 @@ startGame.addEventListener("click", function() {
 })
 
 function battleScreen() {
-    
+
 }
 
 function selectEnemy() {
 
 }
 
+function playerStats() {
+    
+}
+
+function newFight() {
+
+}
+
 function displayInstructions() {
+
+}
+
+function closeInstructions() {
 
 }
 
@@ -61,6 +73,14 @@ function HealAttack() {
 }
 
 function defenceCalc() {
+
+}
+
+function lastMove() {
+
+}
+
+function enemyMove() {
 
 }
 
