@@ -33,8 +33,8 @@ as well as randomising the player stats. */
 
 function battleStart() {
     console.log("BATTLE STARTED!")
-    clearScreen();
     selectEnemy();
+    clearScreen();
     playerStats();
     playerHP = 100;
     enemyHP = 100;
@@ -59,7 +59,7 @@ function startFight() {
         <button id="new-fight-button">New Fight</button>
     </span>
     <span id="enemy-info">
-        <p id="enemy-name">ENEMY NAME</p>
+        <p id="enemy-name">${enemyName}</p>
         <span id="enemy-hp"></span>
     </span>
 </div>
@@ -82,7 +82,7 @@ function startFight() {
 </div>
 <div id="bottom-row-game">
     <span id="player-info">
-        <p id="player-name">HERO NAME</p>
+        <p id="player-name">${heroName}</p>
         <span id="player-hp"></span>
     </span>
     <span>
@@ -92,8 +92,36 @@ function startFight() {
 }
 // Selects a random enemy for the user to face.
 
+let enemyName = []
+
 function selectEnemy() {
     console.log("ENEMY SELECTED!")
+    let num1 = Math.floor(Math.random() * 6 + 1);
+    console.log(num1)
+    if (num1 === 1) {
+        console.log("Fire selected")
+        fireSlime();
+    }
+    else if (num1 === 2) {
+        console.log("Water selected")
+        waterSlime();
+    }
+    else if (num1 === 3) {
+        console.log("Air selected")
+        airSlime();
+    }
+    else if (num1 === 4) {
+        console.log("Ground selected")
+        groundSlime();
+    }
+    else if (num1 === 5) {
+        console.log("Tree selected")
+        treant();
+    }
+    else if (num1 === 6) {
+        console.log("Death selected")
+        armageddon();
+    }
 }
 
 // Assigns 1 random elemental weakness and resistance for the user.
@@ -199,7 +227,6 @@ function playerDefeat() {
 
 // Defining enemies
 
-let enemyList = [fireSlime, waterSlime, airSlime, groundSlime, treant, armageddon];
 let weakAttack = [weakWater, weakAir, weakGround, weakFire, weakSword];
 let nullifyAttack = [nullifyFire, nullifyWater, nullifyAir, nullifyGround];
 let resistAttack = [resistGround, resistFire, resistWater, resistAir, resistSword];
@@ -208,55 +235,54 @@ let normalAttack = [airNormal, groundNormal, fireNormal, waterNormal, slashNorma
 
 function fireSlime() {
     enemyName = "Fire Slime";
-    enemyHP = 100;
+    /*enemyHP = 100;
     weakAttack[1];
     nullifyAttack[1];
     resistAttack[1];
     enemyDamage[1];
-    normalAttack[1, 5];
+    normalAttack[1, 5];*/
 } 
 
 function fireSlime() {
     enemyName = "Water Slime";
-    enemyHP = 100;
+   /* enemyHP = 100;
     weakAttack[2];
     nullifyAttack[2];
     resistAttack[2];
     enemyDamage[2];
-    normalAttack[2, 5];
+    normalAttack[2, 5];*/
 } 
 
 function airSlime() {
     enemyName = "Air Slime";
-    enemyHP = 100;
+   /* enemyHP = 100;
     weakAttack[3];
     nullifyAttack[3];
     resistAttack[3];
     enemyDamage[3];
-    normalAttack[3, 5];
+    normalAttack[3, 5];*/
 } 
 
 function groundSlime() {
     enemyName = "Ground Slime";
-    enemyHP = 100;
+    /*enemyHP = 100;
     weakAttack[4];
     nullifyAttack[4];
     resistAttack[4];
     enemyDamage[4];
-    normalAttack[4, 5];
+    normalAttack[4, 5];*/
 } 
 
 function treant() {
     enemyName = "Anti-magic Treant";
-    enemyHP = 100;
+   /* enemyHP = 100;
     resistAttack[1, 2, 3, 4];
     enemyDamage[5];
-    normalAttack[5];
+    normalAttack[5];*/
 } 
 
 function armageddon() {
     enemyName = "Armageddon";
-    enemyHP = 1000;
-    normalAttack[1, 2, 3, 4, 5];
-    
+    /*enemyHP = 1000;
+    normalAttack[1, 2, 3, 4, 5];*/
 } 
