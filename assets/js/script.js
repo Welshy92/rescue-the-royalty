@@ -47,6 +47,14 @@ function clearScreen() {
     battleScreen.innerHTML = ``;
     console.log("CLEAING INFO SCREEN");
     infoScreen.innerHTML = ``;
+    startFight();
+}
+
+// display the fight screen
+
+function startFight() {
+    console.log("STARTING FIGHT");
+    battleScreen.innerHTML = ``;
 }
 // Selects a random enemy for the user to face.
 
