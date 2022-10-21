@@ -55,7 +55,7 @@ function startFight() {
     console.log("STARTING FIGHT");
     battleScreen.innerHTML = `<div id="top-row-game">
     <span>
-        <button id="new-fight-button">New Fight</button>
+        <button id="new-fight-button" data-type="new-fight">New Fight</button>
     </span>
     <span id="enemy-info">
         <p id="enemy-name">${enemyName}</p>
@@ -72,12 +72,12 @@ function startFight() {
     </span>
 </div>
 <div id="player-abilities">
-    <button id="sword-attack">Sword Swing</button>
-    <button id="heal-attack">Healing Light</button>
-    <button id="fire-attack">Fire</button>
-    <button id="water-attack">Water</button>
-    <button id="air-attack">Air</button>
-    <button id="ground-attack">Ground</button>
+    <button id="sword-attack" data-type="slash">Sword Swing</button>
+    <button id="heal-attack" data-type="heal">Healing Light</button>
+    <button id="fire-attack" data-type="fire">Fire</button>
+    <button id="water-attack" data-type="water">Water</button>
+    <button id="air-attack" data-type="air">Air</button>
+    <button id="ground-attack" data-type="ground">Ground</button>
 </div>
 <div id="bottom-row-game">
     <span id="player-info">
@@ -85,9 +85,12 @@ function startFight() {
         <span id="player-hp"></span>
     </span>
     <span>
-        <button id="instructions-button">Instructions</button>
+        <button id="instructions-button" data-type="inscructions">Instructions</button>
     </span>
 </div>`;
+/* Add event listeners to the new buttons */
+    let newFightButton = document.getElementById('new-fight-button');
+    newFightButton.addEventListener('click', newFight);
 }
 // Selects a random enemy for the user to face.
 
@@ -292,3 +295,14 @@ function armageddon() {
     
     console.log(enemyHP, normalAttack[0, 1, 2, 3, 4], weakAttack[randomWeak], resistAttack[randomResist]);
 } 
+// button assingment after form submission
+
+function newFight(event) {
+    battleStart();
+}
+
+/* Non-gameplay related buttons */
+
+
+
+/* Gameplay related buttons */
