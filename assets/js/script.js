@@ -54,7 +54,41 @@ function clearScreen() {
 
 function startFight() {
     console.log("STARTING FIGHT");
-    battleScreen.innerHTML = ``;
+    battleScreen.innerHTML = `<div id="top-row-game">
+    <span>
+        <button id="new-fight-button">New Fight</button>
+    </span>
+    <span id="enemy-info">
+        <p id="enemy-name">ENEMY NAME</p>
+        <span id="enemy-hp"></span>
+    </span>
+</div>
+<div id="move-log">
+    <span id="enemy-last-move">
+        <p>Info on enemies turn.</p>
+    </span>
+    <span><img id="enemy-image" src="assets/images/f-slime.webp" alt="Fire Slime Enemy"></span>
+    <span id="player-last-move">
+        <p>Info of players last turn.</p>
+    </span>
+</div>
+<div id="player-abilities">
+    <button id="sword-attack">Sword Swing</button>
+    <button id="heal-attack">Healing Light</button>
+    <button id="fire-attack">Fire</button>
+    <button id="water-attack">Water</button>
+    <button id="air-attack">Air</button>
+    <button id="ground-attack">Ground</button>
+</div>
+<div id="bottom-row-game">
+    <span id="player-info">
+        <p id="player-name">HERO NAME</p>
+        <span id="player-hp"></span>
+    </span>
+    <span>
+        <button id="instructions-button">Instructions</button>
+    </span>
+</div>`;
 }
 // Selects a random enemy for the user to face.
 
