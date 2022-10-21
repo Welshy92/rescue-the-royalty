@@ -27,8 +27,8 @@ color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 500px;
+    justify-content: space-between;
+    height: 550px;
     max-width: 90%;
     padding: 25px;
     margin-left: 10%;
@@ -37,6 +37,8 @@ color: rgb(255, 255, 255);
     border-style: solid;
     border-color: aliceblue;
 }
+
+/* initial page load styling */
 
 #game-logo {
     width: 100%;
@@ -177,4 +179,71 @@ footer {
     #look-below {
         font-size: 12px;
     }
+}
+
+/* loaded fight initial styling and positioning */
+
+#game-area > #top-row-game {
+    display: flex;
+    align-items: center;
+}
+
+#game-area > #top-row-game > span > #new-fight-button {
+    position: relative;
+    left: -80%;
+    height: 40px;
+}
+
+#game-area > #top-row-game > #enemy-info > #enemy-name {
+    position: relative;
+    right: -20%;
+}
+
+#game-area > #top-row-game > #enemy-info > #enemy-hp {
+    width: 100px;
+    height: 15px;
+    background-color: red;
+}
+
+#game-area > #move-log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#enemy-image {
+    max-width: 250px
+}
+
+#game-area > #player-abilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#game-area > #player-abilities > button {
+    margin: 3px;
+    height: 40px;
+    min-width: 75px;
+}
+#game-area > #bottom-row-game {
+    display: flex;
+    align-items: center;
+}
+
+#game-area > #bottom-row-game > #player-info > #player-name {
+    position: relative;
+    left: -20%;
+}
+
+#game-area > #bottom-row-game > #player-info > #player-hp {
+    width: 100px;
+    height: 15px;
+    background-color: lime;
+}
+
+#game-area > #bottom-row-game > span > #instructions-button {
+    position: relative;
+    right: -75%;
+    height: 40px;
 }
