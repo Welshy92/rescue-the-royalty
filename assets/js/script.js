@@ -37,7 +37,6 @@ function battleStart() {
     clearScreen();
     playerStats();
     playerHP = 100;
-    enemyHP = 100;
 }
 
 // Clears the game screen
@@ -96,29 +95,29 @@ let enemyName = []
 
 function selectEnemy() {
     console.log("ENEMY SELECTED!")
-    let num1 = Math.floor(Math.random() * 6 + 1);
-    console.log(num1)
-    if (num1 === 1) {
+    let enemyNum = Math.floor(Math.random() * 6 + 1);
+    console.log(enemyNum)
+    if (enemyNum === 1) {
         console.log("Fire selected")
         fireSlime();
     }
-    else if (num1 === 2) {
+    else if (enemyNum === 2) {
         console.log("Water selected")
         waterSlime();
     }
-    else if (num1 === 3) {
+    else if (enemyNum === 3) {
         console.log("Air selected")
         airSlime();
     }
-    else if (num1 === 4) {
+    else if (enemyNum === 4) {
         console.log("Ground selected")
         groundSlime();
     }
-    else if (num1 === 5) {
+    else if (enemyNum === 5) {
         console.log("Tree selected")
         treant();
     }
-    else if (num1 === 6) {
+    else if (enemyNum === 6) {
         console.log("Death selected")
         armageddon();
     }
@@ -153,12 +152,6 @@ function closeInstructions() {
 
 function playerHP() {
     console.log("PLAYER HP")
-}
-
-// Sets enemy HP and what happens when it hits 0.
-
-function enemyHP() {
-    console.log("ENEMY HP")
 }
 
 /* Calculates the players damage based on enemy weakness/resistance/nullify.
@@ -227,62 +220,75 @@ function playerDefeat() {
 
 // Defining enemies
 
-let weakAttack = [weakWater, weakAir, weakGround, weakFire, weakSword];
-let nullifyAttack = [nullifyFire, nullifyWater, nullifyAir, nullifyGround];
-let resistAttack = [resistGround, resistFire, resistWater, resistAir, resistSword];
-let enemyDamage = [fireDamage, waterDamage, airDamage, groundDamage, slashDamage];
-let normalAttack = [airNormal, groundNormal, fireNormal, waterNormal, slashNormal];
+let weakAttack = ["weakWater", "weakAir", "weakGround", "weakFire", "weakSword"];
+let nullifyAttack = ["nullifyFire", "nullifyWater", "nullifyAir", "nullifyGround"];
+let resistAttack = ["resistGround", "resistFire", "resistWater", "resistAir", "resistSword"];
+let enemyDamage = ["fireDamage", "waterDamage", "airDamage", "groundDamage", "slashDamage"];
+let normalAttack = ["airNormal", "groundNormal", "fireNormal", "waterNormal", "slashNormal"];
+let enemyHP = []
+let randomWeak = Math.floor(Math.random() * 5 + 1);
+let randomResist = Math.floor(Math.random() * 5 + 1);
 
 function fireSlime() {
     enemyName = "Fire Slime";
-    /*enemyHP = 100;
+    enemyHP = 100;
+    weakAttack[0];
+    nullifyAttack[0];
+    resistAttack[0];
+    enemyDamage[0];
+    normalAttack[0, 4];
+    console.log(enemyHP, weakAttack[0], nullifyAttack[0], resistAttack[0], enemyDamage[0], normalAttack[0, 4]);
+} 
+
+function waterSlime() {
+    enemyName = "Water Slime";
+    enemyHP = 100;
     weakAttack[1];
     nullifyAttack[1];
     resistAttack[1];
     enemyDamage[1];
-    normalAttack[1, 5];*/
-} 
-
-function fireSlime() {
-    enemyName = "Water Slime";
-   /* enemyHP = 100;
-    weakAttack[2];
-    nullifyAttack[2];
-    resistAttack[2];
-    enemyDamage[2];
-    normalAttack[2, 5];*/
+    normalAttack[1, 4];
+    console.log(enemyHP, weakAttack[1], nullifyAttack[1], resistAttack[1], enemyDamage[1], normalAttack[1, 4]);
 } 
 
 function airSlime() {
     enemyName = "Air Slime";
-   /* enemyHP = 100;
-    weakAttack[3];
-    nullifyAttack[3];
-    resistAttack[3];
-    enemyDamage[3];
-    normalAttack[3, 5];*/
+    enemyHP = 100;
+    weakAttack[2];
+    nullifyAttack[2];
+    resistAttack[2];
+    enemyDamage[2];
+    normalAttack[2, 4];
+    console.log(enemyHP, weakAttack[2], nullifyAttack[2], resistAttack[2], enemyDamage[2], normalAttack[2, 4]);
 } 
 
 function groundSlime() {
     enemyName = "Ground Slime";
-    /*enemyHP = 100;
-    weakAttack[4];
-    nullifyAttack[4];
-    resistAttack[4];
+    enemyHP = 100;
+    weakAttack[3];
+    nullifyAttack[3];
+    resistAttack[3];
     enemyDamage[4];
-    normalAttack[4, 5];*/
+    normalAttack[3, 4];
+    console.log(enemyHP, weakAttack[3], nullifyAttack[3], resistAttack[3], enemyDamage[3], normalAttack[3, 4]);
 } 
 
 function treant() {
     enemyName = "Anti-magic Treant";
-   /* enemyHP = 100;
-    resistAttack[1, 2, 3, 4];
-    enemyDamage[5];
-    normalAttack[5];*/
+    enemyHP = 100;
+    resistAttack[0, 1, 2, 3];
+    enemyDamage[4];
+    weakAttack[4];
+    console.log(enemyHP, resistAttack[0, 1, 2, 3], enemyDamage[4], weakAttack[4]);
 } 
 
 function armageddon() {
     enemyName = "Armageddon";
-    /*enemyHP = 1000;
-    normalAttack[1, 2, 3, 4, 5];*/
+    enemyHP = 1000;
+    normalAttack[0, 1, 2, 3, 4];
+    console.log("weak =", randomWeak, "resist=", randomResist);
+    weakAttack[randomWeak];
+    resistAttack[randomResist];
+    
+    console.log(enemyHP, normalAttack[0, 1, 2, 3, 4], weakAttack[randomWeak], resistAttack[randomResist]);
 } 
