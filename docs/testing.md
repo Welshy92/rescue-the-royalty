@@ -69,6 +69,10 @@ Footer testing
  
 ### **Solved Bugs**
 
+* Positioning of the game area is scewed on small screen sizes. Seems to be caused to the enemy info table not being able to get any smaller at 400px. Redesign the element to show each enemy seperately. 
+
+* Armageddon's stats were only being randomised the first time you face them. Fixed by adding the random roll into the armageddon function.
+
 ### **Known Bugs**
 
-Positioning of the game area is scewed on small screen sizes. Seems to be caused to the enemy info table not being able to get any smaller at 400px. Redesign the element to show each enemy seperately. May also help with ingame instructions as I can just show the enemy the user is facing off against.
+Enemy and Player HP bars do not show. Div size is showing as 0x0 on page despite dev tools stating differently.
