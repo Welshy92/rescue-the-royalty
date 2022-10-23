@@ -25,7 +25,7 @@ userForm.addEventListener("submit", handleSubmit);
 // Naming the 2 boxes that will be changed throughout gameplay.
 
 let battleScreen = document.getElementById("game-area");
-let infoScreen = document.getElementById("instructions");
+let infoScreen = document.getElementById("info-screen");
 
 /* This will run at the start of every new fight.
 It resets the game area and sets the enemy the user faces,
@@ -62,6 +62,7 @@ function startFight() {
         <span id="enemy-hp"></span>
     </span>
 </div>
+<div id="info-float"></div>
 <div id="move-log">
     <span id="enemy-last-move">
         <p>Info on enemies turn.</p>
@@ -85,12 +86,15 @@ function startFight() {
         <span id="player-hp"></span>
     </span>
     <span>
-        <button id="instructions-button" data-type="inscructions">Instructions</button>
+        <button id="instructions-button" data-type="instructions">Instructions</button>
     </span>
 </div>`;
 /* Add event listeners to the new buttons */
-    let newFightButton = document.getElementById('new-fight-button');
-    newFightButton.addEventListener('click', newFight);
+    let newFightButton = document.getElementById("new-fight-button");
+    newFightButton.addEventListener("click", newFight);
+
+    let instructionsButton = document.getElementById("instructions-button");
+    instructionsButton.addEventListener("click", instructionsBox);
 }
 // Selects a random enemy for the user to face.
 
@@ -295,14 +299,22 @@ function armageddon() {
     
     console.log(enemyHP, normalAttack[0, 1, 2, 3, 4], weakAttack[randomWeak], resistAttack[randomResist]);
 } 
-// button assingment after form submission
+// button event functions
 
 function newFight(event) {
     battleStart();
 }
 
-/* Non-gameplay related buttons */
+function instructionsButton(event) {
+    instructionsBox();
+}
 
+/* Instruction box pop up */
 
+let infoFloat = document.getElementById("info-float")
 
-/* Gameplay related buttons */
+function instructionsBox() {
+    console.log("FLOATING INFO BOX");
+    infoFloat.style.visibility = "true";
+    infoFloat.innerHTML = ``;
+}
