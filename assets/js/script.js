@@ -300,7 +300,7 @@ function groundSlime() {
 function treant() {
     enemyName = "Anti-magic Treant";
     enemyHP = 100;
-    resist = resistAttack[0, 1, 2, 3];
+    resist = resistAttack[0] + " + " + resistAttack[1] + " + " + resistAttack[2] + " + " + resistAttack[3];
     damage = enemyDamage[4];
     weakness = weakAttack[4];
     console.log(enemyHP, weakness, resist, damage);
@@ -309,12 +309,14 @@ function treant() {
 function armageddon() {
     enemyName = "Armageddon";
     enemyHP = 1000;
-    normalAttack[0, 1, 2, 3, 4];
+    normal = normalAttack[0] + " + " + normalAttack[1] + " + " + normalAttack[2] + " + " + normalAttack[3] + " + " + normalAttack[4];
     console.log("weak =", randomWeak, "resist=", randomResist);
-    weakAttack[randomWeak];
-    resistAttack[randomResist];
+    weakness = weakAttack[randomWeak];
+    resist = resistAttack[randomResist];
+    randomWeak = Math.floor(Math.random() * 5 + 1);
+    randomResist = Math.floor(Math.random() * 5 + 1)
     
-    console.log(enemyHP, normalAttack[0, 1, 2, 3, 4], weakAttack[randomWeak], resistAttack[randomResist]);
+    console.log(enemyHP, normal. weakness, resist);
 } 
 // button event functions
 
