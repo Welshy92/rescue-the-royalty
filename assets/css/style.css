@@ -247,3 +247,28 @@ footer {
     right: -75%;
     height: 40px;
 }
+
+/* Floating instruction box styling */
+
+#info-float {
+    display: none;
+    border: 5px double aqua;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    position: absolute;
+    background-color: black;
+}
+
+#info-float > p {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#info-float > button {
+    width: 100px;
+    height: 50px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+}

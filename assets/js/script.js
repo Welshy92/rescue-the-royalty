@@ -34,9 +34,9 @@ as well as randomising the player stats. */
 function battleStart() {
     console.log("BATTLE STARTED!")
     selectEnemy();
-    clearScreen();
     playerStats();
     playerHP = 100;
+    clearScreen();
 }
 
 // Clears the game screen
@@ -62,7 +62,16 @@ function startFight() {
         <span id="enemy-hp"></span>
     </span>
 </div>
-<div id="info-float"></div>
+<div id="info-float">
+<p>${enemyName}</p>
+<p>LORE PIECE</p>
+<p>Enemy weakness: ${weakness}</p>
+<p>Enemy resistance: ${resist}</p>
+<p>Enemy nullification: ${nullify}</p>
+<p>Your resist: </p>
+<p>Your weakness: </p>
+<button id="close-info">CLOSE</button>
+</div>
 <div id="move-log">
     <span id="enemy-last-move">
         <p>Info on enemies turn.</p>
@@ -86,7 +95,7 @@ function startFight() {
         <span id="player-hp"></span>
     </span>
     <span>
-        <button id="instructions-button" data-type="instructions">Instructions</button>
+        <button id="instructions-button" data-type="instructions">Info</button>
     </span>
 </div>`;
 /* Add event listeners to the new buttons */
@@ -95,6 +104,9 @@ function startFight() {
 
     let instructionsButton = document.getElementById("instructions-button");
     instructionsButton.addEventListener("click", instructionsBox);
+
+    let closeInfoButton = document.getElementById("close-info");
+    closeInfoButton.addEventListener("click", closeInfoFloat);
 }
 // Selects a random enemy for the user to face.
 
@@ -149,7 +161,7 @@ function displayInstructions() {
     console.log("SHOWING INSTRUCTIONS")
 }
 
-// Pressing the x button will hide the instructions box.
+// Pressing the close button will hide the instructions box.
 
 function closeInstructions() {
     console.log("HIDING INSTRUCTIONS")
@@ -227,66 +239,71 @@ function playerDefeat() {
 
 // Defining enemies
 
-let weakAttack = ["weakWater", "weakAir", "weakGround", "weakFire", "weakSword"];
-let nullifyAttack = ["nullifyFire", "nullifyWater", "nullifyAir", "nullifyGround"];
-let resistAttack = ["resistGround", "resistFire", "resistWater", "resistAir", "resistSword"];
-let enemyDamage = ["fireDamage", "waterDamage", "airDamage", "groundDamage", "slashDamage"];
-let normalAttack = ["airNormal", "groundNormal", "fireNormal", "waterNormal", "slashNormal"];
-let enemyHP = []
+let weakAttack = ["Water", "Air", "Ground", "Fire", "Sword"];
+let nullifyAttack = ["Fire", "Water", "Air", "Ground"];
+let resistAttack = ["Ground", "Fire", "Water", "Air", "Sword"];
+let enemyDamage = ["Fire", "Water", "Air", "Ground", "Slash"];
+let normalAttack = ["Air", "Ground", "Fire", "Water", "Slash"];
+let enemyHP = "";
+let weakness = "";
+let nullify = "";
+let resist = "";
+let damage = "";
+let normal = "";
 let randomWeak = Math.floor(Math.random() * 5 + 1);
 let randomResist = Math.floor(Math.random() * 5 + 1);
 
 function fireSlime() {
     enemyName = "Fire Slime";
     enemyHP = 100;
-    weakAttack[0];
-    nullifyAttack[0];
-    resistAttack[0];
-    enemyDamage[0];
-    normalAttack[0, 4];
-    console.log(enemyHP, weakAttack[0], nullifyAttack[0], resistAttack[0], enemyDamage[0], normalAttack[0, 4]);
+    weakness = weakAttack[0];
+    nullify = nullifyAttack[0];
+    resist = resistAttack[0];
+    damage = enemyDamage[0];
+    normal = normalAttack[0, 4];
+    console.log(enemyHP, weakness, nullify, resist, damage, normal);
 } 
 
 function waterSlime() {
     enemyName = "Water Slime";
     enemyHP = 100;
-    weakAttack[1];
-    nullifyAttack[1];
-    resistAttack[1];
-    enemyDamage[1];
-    normalAttack[1, 4];
-    console.log(enemyHP, weakAttack[1], nullifyAttack[1], resistAttack[1], enemyDamage[1], normalAttack[1, 4]);
+    weakness = weakAttack[1];
+    nullify = nullifyAttack[1];
+    resist = resistAttack[1];
+    damage = enemyDamage[1];
+    normal = normalAttack[1, 4];
+    console.log(enemyHP, weakness, nullify, resist, damage, normal);
 } 
 
 function airSlime() {
     enemyName = "Air Slime";
     enemyHP = 100;
-    weakAttack[2];
-    nullifyAttack[2];
-    resistAttack[2];
-    enemyDamage[2];
-    normalAttack[2, 4];
-    console.log(enemyHP, weakAttack[2], nullifyAttack[2], resistAttack[2], enemyDamage[2], normalAttack[2, 4]);
+    weakness = weakAttack[2];
+    nullify = nullifyAttack[2];
+    resist = resistAttack[2];
+    damage = enemyDamage[2];
+    normal = normalAttack[2, 4];
+    console.log(enemyHP, weakness, nullify, resist, damage, normal);
 } 
 
 function groundSlime() {
     enemyName = "Ground Slime";
     enemyHP = 100;
-    weakAttack[3];
-    nullifyAttack[3];
-    resistAttack[3];
-    enemyDamage[4];
-    normalAttack[3, 4];
-    console.log(enemyHP, weakAttack[3], nullifyAttack[3], resistAttack[3], enemyDamage[3], normalAttack[3, 4]);
+    weakness = weakAttack[3];
+    nullify = nullifyAttack[3];
+    resist = resistAttack[3];
+    damage = enemyDamage[3];
+    normal = normalAttack[3, 4];
+    console.log(enemyHP, weakness, nullify, resist, damage, normal);
 } 
 
 function treant() {
     enemyName = "Anti-magic Treant";
     enemyHP = 100;
-    resistAttack[0, 1, 2, 3];
-    enemyDamage[4];
-    weakAttack[4];
-    console.log(enemyHP, resistAttack[0, 1, 2, 3], enemyDamage[4], weakAttack[4]);
+    resist = resistAttack[0, 1, 2, 3];
+    damage = enemyDamage[4];
+    weakness = weakAttack[4];
+    console.log(enemyHP, weakness, resist, damage);
 } 
 
 function armageddon() {
@@ -309,12 +326,20 @@ function instructionsButton(event) {
     instructionsBox();
 }
 
-/* Instruction box pop up */
+function closeInfoButton(event) {
+    closeInfoFloat();
+}
 
-let infoFloat = document.getElementById("info-float")
+/* Floating instruction box open and close */
 
 function instructionsBox() {
+    let infoFloat = document.getElementById("info-float")
     console.log("FLOATING INFO BOX");
-    infoFloat.style.visibility = "true";
-    infoFloat.innerHTML = ``;
+    infoFloat.style.display = "flex";
+}
+
+function closeInfoFloat() {
+    let infoFloat = document.getElementById("info-float")
+    console.log("CLOSING INFO BOX");
+    infoFloat.style.display = "none";
 }
