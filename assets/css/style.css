@@ -21,6 +21,7 @@ color: rgb(255, 255, 255);
     padding-top: 10px;
     font-size: 1.3em;
     font-family: 'Silkscreen', cursive;
+    color: magenta;
 }
 
 #game-area {
@@ -33,9 +34,7 @@ color: rgb(255, 255, 255);
     padding: 25px;
     margin-left: 10%;
     margin-right: 10%;
-    border: 1px;
-    border-style: solid;
-    border-color: aliceblue;
+    border: 3px double cyan;
 }
 
 /* initial page load styling */
@@ -79,11 +78,11 @@ color: rgb(255, 255, 255);
 }
 
 #win-score {
-    color: greenyellow;
+    color: cyan;
 }
 
 #loss-score {
-    color: red;
+    color: magenta;
 }
 
 #info-box {
@@ -133,7 +132,7 @@ color: rgb(255, 255, 255);
 
 .credit > a {
     text-decoration: none;
-    color: aqua;
+    color: cyan;
 }
 
 footer {
@@ -148,7 +147,7 @@ footer {
     font-size: 35px;
     padding-left: 5px;
     padding-right: 5px;
-    color: aqua;
+    color: cyan;
 }
 
 /* Media queries to help things scale at high widths */
@@ -208,7 +207,7 @@ footer {
 #game-area > #top-row-game > #enemy-info > #enemy-hp {
     width: 100px;
     height: 15px;
-    background-color: red;
+    background-color: magenta;
 }
 
 #game-area > #move-log {
@@ -245,7 +244,7 @@ footer {
 #game-area > #bottom-row-game > #player-info > #player-hp {
     width: 100px;
     height: 15px;
-    background-color: lime;
+    background-color: cyan;
 }
 
 #game-area > #bottom-row-game > span > #instructions-button {
