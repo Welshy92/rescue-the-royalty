@@ -59,7 +59,7 @@ function startFight() {
     </span>
     <span id="enemy-info">
         <p id="enemy-name">${enemyName}</p>
-        <span id="enemy-hp"></span>
+        <span id="enemy-hp"><p id="enemy-hp-number">${enemyHP} HP</p></span>
     </span>
 </div>
 <div id="info-float">
@@ -82,7 +82,7 @@ function startFight() {
     </span>
 </div>
 <div id="player-abilities">
-    <button id="sword-attack" data-type="slash">Sword Swing</button>
+    <button id="slash-attack" data-type="slash">Sword Swing</button>
     <button id="heal-attack" data-type="heal">Healing Light</button>
     <button id="fire-attack" data-type="fire">Fire</button>
     <button id="water-attack" data-type="water">Water</button>
@@ -92,7 +92,7 @@ function startFight() {
 <div id="bottom-row-game">
     <span id="player-info">
         <p id="player-name">${heroName}</p>
-        <span id="player-hp"></span>
+        <span id="player-hp"><p id="player-hp-number">${playerHP} HP</p></span>
     </span>
     <span>
         <button id="instructions-button" data-type="instructions">Info</button>
@@ -107,6 +107,24 @@ function startFight() {
 
     let closeInfoButton = document.getElementById("close-info");
     closeInfoButton.addEventListener("click", closeInfoFloat);
+
+    let slashButton = document.getElementById("slash-attack");
+    slashButton.addEventListener("click", slashAttack);
+
+    let fireButton = document.getElementById("fire-attack");
+    slashButton.addEventListener("click", fireAttack);
+
+    let waterButton = document.getElementById("water-attack");
+    slashButton.addEventListener("click", waterAttack);
+
+    let airButton = document.getElementById("air-attack");
+    slashButton.addEventListener("click", airAttack);
+
+    let groundButton = document.getElementById("ground-attack");
+    slashButton.addEventListener("click", groundAttack);
+
+    let healButton = document.getElementById("heal-attack");
+    slashButton.addEventListener("click", healAttack);
 }
 // Selects a random enemy for the user to face.
 
@@ -185,32 +203,6 @@ Displays the attack on the screen to the player */
 
 function enemyAttack() {
     console.log("ENEMY ATTACK")
-}
-
-// All of the avaiable attacks to the player
-
-function swordSwing() {
-    console.log("Sword")
-}
-
-function fireAttack() {
-    console.log("fire")
-}
-
-function waterAttack() {
-    console.log("water")
-}
-
-function airAttack() {
-    console.log("air")
-}
-
-function groundAttack() {
-    console.log("ground")
-}
-
-function HealAttack() {
-    console.log("heal")
 }
 
 // The box that shows the last move by the player.
@@ -344,4 +336,33 @@ function closeInfoFloat() {
     let infoFloat = document.getElementById("info-float")
     console.log("CLOSING INFO BOX");
     infoFloat.style.display = "none";
+}
+
+/* Player move select. */
+
+function slashAttack(event) {
+    console.log("SLASHING");
+    if (weakness === weakAttack[4]) {
+
+    }
+}
+
+function fireAttack(event) {
+    console.log("FIRING");
+}
+
+function waterAttack(event) {
+    console.log("WATERING");
+}
+
+function airAttack(event) {
+    console.log("AIRING");
+}
+
+function groundAttack(event) {
+    console.log("GROUNDING");
+}
+
+function healAttack(event) {
+    console.log("HEALING");
 }

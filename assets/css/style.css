@@ -199,7 +199,7 @@ footer {
     height: 40px;
 }
 
-#game-area > #top-row-game > #enemy-info > #enemy-name {
+#game-area > #top-row-game > #enemy-info {
     position: relative;
     right: -20%;
 }
@@ -236,7 +236,7 @@ footer {
     align-items: center;
 }
 
-#game-area > #bottom-row-game > #player-info > #player-name {
+#game-area > #bottom-row-game > #player-info {
     position: relative;
     left: -20%;
 }
