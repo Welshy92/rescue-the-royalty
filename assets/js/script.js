@@ -433,3 +433,19 @@ function healAttack(event) {
         document.getElementById("player-hp-number").innerText = oldEnemyHP - 40;
         enemyTurn();
 }
+
+// Player and Enemy HP checks.
+
+function checkEnemyHP() {
+    if (parseInt(document.getElementById("enemy-hp-number")) <= 0) {
+        playerVictory();
+    } else {
+        enemyTurn();
+    }
+}
+
+function checkPlayerHP() {
+    if (parseInt(document.getElementById("player-hp-number")) <= 0) {
+        playerDefeat();
+    }
+}
