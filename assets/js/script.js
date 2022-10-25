@@ -125,6 +125,7 @@ function startFight() {
 
     let healButton = document.getElementById("heal-attack");
     healButton.addEventListener("click", healAttack);
+
 }
 // Selects a random enemy for the user to face.
 
@@ -342,14 +343,12 @@ function closeInfoFloat() {
 
 function slashAttack(event) {
     console.log("SLASHING");
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
     if (weakness === weakAttack[4]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[4]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
     } else {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
     }
     checkEnemyHP();
@@ -357,17 +356,14 @@ function slashAttack(event) {
 
 function fireAttack(event) {
     console.log("FIRING");
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
     if (weakness === weakAttack[3]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[1]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
     } else if (nullify === nullifyAttack[0]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP;
     } else {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
     }
     checkEnemyHP();
@@ -375,17 +371,14 @@ function fireAttack(event) {
 
 function waterAttack(event) {
     console.log("WATERING");
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
     if (weakness === weakAttack[0]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[2]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
     } else if (nullify === nullifyAttack[1]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP;
     } else {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
     }
     checkEnemyHP();
@@ -393,17 +386,14 @@ function waterAttack(event) {
 
 function airAttack(event) {
     console.log("AIRING");
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
     if (weakness === weakAttack[1]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[3]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
     } else if (nullify === nullifyAttack[2]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP;
     } else {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
     }
     checkEnemyHP();
@@ -411,26 +401,26 @@ function airAttack(event) {
 
 function groundAttack(event) {
     console.log("GROUNDING");
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
     if (weakness === weakAttack[2]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[0]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
     } else if (nullify === nullifyAttack[3]) {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP;
     } else {
-        let oldEnemyHp = parseInt(document.getElementById("enemy-hp-number").innerText);
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
     }
     checkEnemyHP();
 }
 
 function healAttack(event) {
+    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
+    
     console.log("HEALING");
-        let oldPlayerHp = parseInt(document.getElementById("player-hp-number").innerText);
-        document.getElementById("player-hp-number").innerText = oldEnemyHP - 40;
+        document.getElementById("player-hp-number").innerText = oldPlayerHP + 50;
+        playerHP = oldPlayerHP + 50;
+        console.log(playerHP)
         enemyTurn();
 }
 
