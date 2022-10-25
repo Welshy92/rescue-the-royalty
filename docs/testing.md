@@ -73,6 +73,8 @@ Footer testing
 
 * Armageddon's stats were only being randomised the first time you face them. Fixed by adding the random roll into the armageddon function.
 
+* Slash button was calling all attack functions. Other attacks were calling none. Corrected event listeners. (Thank you Mr.Bim!)
+
 ### **Known Bugs**
 
 Enemy and Player HP bars do not show. Div size is showing as 0x0 on page despite dev tools stating differently.

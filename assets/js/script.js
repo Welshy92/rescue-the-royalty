@@ -112,19 +112,19 @@ function startFight() {
     slashButton.addEventListener("click", slashAttack);
 
     let fireButton = document.getElementById("fire-attack");
-    slashButton.addEventListener("click", fireAttack);
+    fireButton.addEventListener("click", fireAttack);
 
     let waterButton = document.getElementById("water-attack");
-    slashButton.addEventListener("click", waterAttack);
+    waterButton.addEventListener("click", waterAttack);
 
     let airButton = document.getElementById("air-attack");
-    slashButton.addEventListener("click", airAttack);
+    airButton.addEventListener("click", airAttack);
 
     let groundButton = document.getElementById("ground-attack");
-    slashButton.addEventListener("click", groundAttack);
+    groundButton.addEventListener("click", groundAttack);
 
     let healButton = document.getElementById("heal-attack");
-    slashButton.addEventListener("click", healAttack);
+    healButton.addEventListener("click", healAttack);
 }
 // Selects a random enemy for the user to face.
 
