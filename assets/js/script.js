@@ -160,13 +160,6 @@ function selectEnemy() {
         armageddon();
     }
 }
-
-// Assigns 1 random elemental weakness and resistance for the user.
-
-function playerStats() {
-    console.log("PLAYER STATS SELECTED!")
-}
-
 // Pressing the new-fight button starts the game over
 
 function newFight() {
@@ -228,6 +221,37 @@ function playerVictory() {
 
 function playerDefeat() {
     console.log("YOU LOSE")
+}
+
+// Randomly assign 1 weakness and 1 resistance to the player.
+let playerWeakTo = "";
+let playerResistTo = "";
+
+function playerStats() {
+    let randomPlayerWeak = Math.floor(Math.random() * 4 + 1);
+    let randomPlayerResist = Math.floor(Math.random() * 4 + 1);
+
+    if (randomPlayerWeak === 1) {
+        playerWeakTo = "Fire";
+    } else if (randomPlayerWeak === 2) {
+        playerWeakTo = "Water";
+    } else if (randomPlayerWeak === 3) {
+        playerWeakTo = "Air";
+    } else if (randomPlayerWeak === 4) {
+        playerWeakTo = "Ground";
+    }
+    console.log(playerWeakTo + "PWeak");
+
+    if (randomPlayerResist === 1) {
+        playerResistTo = "Fire";
+    } else if (randomPlayerResist === 2) {
+        playerResistTo = "Water";
+    } else if (randomPlayerResist === 3) {
+        playerResistTo = "Air";
+    } else if (randomPlayerResist === 4) {
+        playerResistTo = "Ground";
+    }
+    console.log(playerResistTo + "PResist");
 }
 
 // Defining enemies
@@ -439,3 +463,5 @@ function checkPlayerHP() {
         playerDefeat();
     }
 }
+
+// Enemy move
