@@ -68,8 +68,8 @@ function startFight() {
 <p>Enemy weakness: ${weakness}</p>
 <p>Enemy resistance: ${resist}</p>
 <p>Enemy nullification: ${nullify}</p>
-<p>Your resist: </p>
-<p>Your weakness: </p>
+<p>Your resist: ${playerResistTo}</p>
+<p>Your weakness: ${playerWeakTo}</p>
 <button id="close-info">CLOSE</button>
 </div>
 <div id="move-log">
