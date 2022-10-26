@@ -62,7 +62,7 @@ Full testing was performed on the following devices:
     * Google Chrome
     * OperaGX
  
-Footer testing
+Footer testing. A check to see that the positioning was correct on all screen sizes and to check to see that the social links were working and opening in a new tab.
 
  
 ## **Bugs**

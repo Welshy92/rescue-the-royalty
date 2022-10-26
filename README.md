@@ -30,7 +30,7 @@ Rescue The Royalty at it's core is a very basic version of what you would expect
 * To be able to view and interact with the site on multiple different devices.
 * To have the need for strategising their choices to win the fights.
 * To be able to see how many wins or defeats they have during their current play session.
-* To be able to view the games instructions at any point.
+* To be able to view the enemy and hero stats during combat.
  
 #### First Time Visitor Goals
 
@@ -80,13 +80,14 @@ HTML, CSS, Javascript
 * [Balsamiq](https://balsamiq.com) - Used to create wireframes.
 * [Git](https://git-scm.com) - For version control.
 * [Github](https://github.com) - To save and store all the files of the site.
-* [Gitpod](https://www.gitpod.io) - To write all the HTML & CSS. Also used to write the README.
-* [coolers](https://coolors.co) - To create a colour scheme for use across the site.
+* [Gitpod](https://www.gitpod.io) - To write all the HTML, CSS and Javascript. Also used to write the README.
 * [Google Fonts](https://fonts.google.com) - To import the fonts used on the site.
 * [Font Awesome](https://fontawesome.com) - For the iconography of the site.
 * [OperaGX](https://www.opera.com/gx) - Dev Tools to troubleshoot and test features, solve issues with responsiveness and styling.
 * [Am I Responsive?](https://ui.dev/amiresponsive) - To show the website image on a variety of devices.
 * [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) - Chrome DevTool extension that I use on my OperaGX browser.
+* [Ico Converter](https://www.icoconverter.com) - Used to create my favicon from an image.
+* [Pixil Art](https://www.pixilart.com) - Used to create all the images used on the game screen + the favicon.
 ***
 ## **Deployment & Local Development**
  
@@ -126,10 +127,18 @@ This website is a solo project created by [myself.](https://github.com/Welshy92)
  
 ### **Learning Resources**
  
-There are a few different sites that I used to learn the required skills to develop this website. 
+There are a few different sites that I used to learn the required skills to develop this website.
+* [Code Institute](https://codeinstitute.net) - Used the LMS to learn the javascript essentials.
+* Code Institute Slack - Used to get answers for specific queries.
+* [w3Schools](https://www.w3schools.com) - Used to double check some syntax for both CSS and Javascript.
+* [Stack Overflow](https://stackoverflow.com) - Used as my main search point after Slack to get the answers I needed.
+
 ### **Code Used**
  
 ### **Media**
  
 ### **Acknowledgments**
+
+* Bim williams - Assisting me with an event listener bug I was trying to fix.
+* August 2022 Code Institute Cohorts - Keeping me sane and motivated.
  
