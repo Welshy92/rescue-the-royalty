@@ -118,23 +118,6 @@ color: rgb(255, 255, 255);
     text-align: center;
 }
 
-#attribute {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 15px;
-}
-
-.credit {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
-}
-
-.credit > a {
-    text-decoration: none;
-    color: cyan;
-}
-
 footer {
     display: flex;
     justify-content: space-evenly;
