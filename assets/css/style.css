@@ -128,13 +128,14 @@ footer {
     color: magenta;
     position: sticky;
     bottom: 0;
+    height: 50px;
 }
 
 .social {
-    font-size: 35px;
+    height: 45px;
+    width: 45px;
     padding-left: 5px;
     padding-right: 5px;
-    color: cyan;
 }
 
 /* Media queries to help things scale at high widths */
