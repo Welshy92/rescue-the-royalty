@@ -215,6 +215,10 @@ function enemyMove() {
 
 function playerVictory() {
     console.log("YOU WIN");
+    battleScreen.innerHTML = `<div id="player-win-screen">
+    <p>Thank you ${heroName}! You have vanquished this foe and made the kingdom just a little bit safer. However the seemingly eternal search must continue.</p>
+    <button id="fight-on-button">Fight On ${heroName}!</button>
+    </div>`;
 }
 
 // Add 1 to the player score and display message
