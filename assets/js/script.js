@@ -451,9 +451,11 @@ function healAttack(event) {
 // Player and Enemy HP checks.
 
 function checkEnemyHP() {
-    if (parseInt(document.getElementById("enemy-hp-number")) <= 0) {
+    if (parseInt(document.getElementById("enemy-hp-number").innerHTML) <= 0) {
+        console.log("victory detected");
         playerVictory();
     } else {
+        console.log("victory not detected");
         enemyTurn();
     }
 }

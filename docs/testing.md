@@ -75,6 +75,8 @@ Footer testing. A check to see that the positioning was correct on all screen si
 
 * Slash button was calling all attack functions. Other attacks were calling none. Corrected event listeners. (Thank you Mr.Bim!)
 
+* Victory condition not being detected when enemy hp reaches 0 due to missing ".innerHTML" on the "getElementByID".
+
 ### **Known Bugs**
 
 Enemy and Player HP bars do not show. Div size is showing as 0x0 on page despite dev tools stating differently.
