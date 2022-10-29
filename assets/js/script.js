@@ -328,7 +328,7 @@ function airSlime() {
     resist = resistAttack[2];
     damage = enemyDamage[2];
     normal = normalAttack[2, 4];
-    enemyImage = "f-slime";
+    enemyImage = "a-slime";
     console.log(enemyHP, weakness, nullify, resist, damage, normal);
 } 
 
