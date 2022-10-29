@@ -75,7 +75,7 @@ function startFight() {
     <span id="enemy-last-move">
         <p></p>
     </span>
-    <span><img id="enemy-image" src="assets/images/${enemyImage}.webp" alt="Fire Slime Enemy"></span>
+    <span><img id="enemy-image" src="assets/images/${enemyImage}.webp" alt="${enemyName} Enemy"></span>
     <span id="player-last-move">
         <p></p>
     </span>
@@ -316,7 +316,7 @@ function waterSlime() {
     resist = resistAttack[1];
     damage = enemyDamage[1];
     normal = normalAttack[1, 4];
-    enemyImage = "f-slime";
+    enemyImage = "w-slime";
     console.log(enemyHP, weakness, nullify, resist, damage, normal);
 } 
 
