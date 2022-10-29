@@ -211,11 +211,11 @@ function enemyMove() {
     console.log("enemy move");
 }
 
-// Add 1 to the player score and display message
+// Add 1 to the player win score and display message
 
 function playerVictory() {
     console.log("YOU WIN");
-    battleScreen.innerHTML = `<div id="player-win-screen">
+    battleScreen.innerHTML = `<div id="End-screen">
     <p>Thank you ${heroName}! You have vanquished this foe and made the kingdom just a little bit safer. However the seemingly eternal search must continue.</p>
     <button id="fight-on-button">Fight On ${heroName}!</button>
     </div>`;
@@ -227,10 +227,20 @@ function playerVictory() {
     fightOnButton.addEventListener("click", newFight);
 }
 
-// Add 1 to the player score and display message
+// Add 1 to the player loss score and display message
 
 function playerDefeat() {
     console.log("YOU LOSE");
+    battleScreen.innerHTML = `<div id="End-screen">
+    <p> ${heroName}, you fell unconcious and awaken many hours later. The enemy has disappeared and you feel healthy to fight again. The royalty must still be out there somewhere!.</p>
+    <button id="fight-on-button">Fight On ${heroName}!</button>
+    </div>`;
+
+    let oldWins = document.getElementById("loss-score").innerHTML;
+    document.getElementById("loss-score").innerHTML = ++oldWins;
+
+    let fightOnButton = document.getElementById("fight-on-button");
+    fightOnButton.addEventListener("click", newFight);
 }
 
 // Randomly assign 1 weakness and 1 resistance to the player.
@@ -240,6 +250,12 @@ let playerResistTo = "";
 function playerStats() {
     let randomPlayerWeak = Math.floor(Math.random() * 4 + 1);
     let randomPlayerResist = Math.floor(Math.random() * 4 + 1);
+    console.log(randomPlayerResist, "+", randomPlayerWeak);
+    while (randomPlayerResist == randomPlayerWeak) {
+        console.log("Rerolling Player resistance");
+        randomPlayerResist = Math.floor(Math.random() * 4 + 1);
+    }
+    console.log(randomPlayerResist, "+", randomPlayerWeak);
 
     if (randomPlayerWeak === 1) {
         playerWeakTo = "Fire";
@@ -544,10 +560,10 @@ function eAirAttack() {
 function eGroundAttack() {
     let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
     
-    if (playerWeakTo === "Fire") {
+    if (playerWeakTo === "Ground") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
         console.log("bonus enemy damage");
-    } else if (playerResistTo === "Fire") {
+    } else if (playerResistTo === "Ground") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
         console.log("Less enemy damage");
     } else {
