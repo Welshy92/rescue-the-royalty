@@ -77,6 +77,8 @@ Footer testing. A check to see that the positioning was correct on all screen si
 
 * Victory condition not being detected when enemy hp reaches 0 due to missing ".innerHTML" on the "getElementByID".
 
+* Player could get assinged the same element for resistance and weakness. Added a while loop to reroll resistance when they are equal.
+
 ### **Known Bugs**
 
 Enemy and Player HP bars do not show. Div size is showing as 0x0 on page despite dev tools stating differently.
