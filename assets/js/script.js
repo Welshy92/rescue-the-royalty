@@ -35,7 +35,6 @@ function battleStart() {
     console.log("BATTLE STARTED!");
     selectEnemy();
     playerStats();
-    playerHP = 100;
     clearScreen();
 }
 
@@ -92,7 +91,7 @@ function startFight() {
 <div id="bottom-row-game">
     <span id="player-info">
         <p id="player-name">${heroName}</p>
-        <span id="player-hp"><p><span id="player-hp-number">${playerHP}</span> HP</p></span>
+        <span id="player-hp"><p><span id="player-hp-number">100</span> HP</p></span>
     </span>
     <span>
         <button id="instructions-button" data-type="instructions">Info</button>
@@ -132,7 +131,7 @@ function startFight() {
 let enemyName = [];
 
 function selectEnemy() {
-    console.log("ENEMY SELECTED!")
+    console.log("ENEMY SELECTED!");
     let enemyNum = Math.floor(Math.random() * 6 + 1);
     console.log(enemyNum);
     if (enemyNum === 1) {
@@ -472,7 +471,7 @@ function airAttack(event) {
 
 function groundAttack(event) {
     console.log("GROUNDING");
-    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[2]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
         document.getElementById("player-last-move").innerHTML = `<p>Supreme Gravity! You hit the enemy for 40 damage.</p>`;
@@ -494,8 +493,6 @@ function healAttack(event) {
     let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
         document.getElementById("player-hp-number").innerText = oldPlayerHP + 50;
         document.getElementById("player-last-move").innerHTML = `<p>You bathe in the light and heal for 50HP.</p>`;
-        playerHP = oldPlayerHP + 50;
-        console.log(playerHP);
         enemyTurn();
 }
 
@@ -521,17 +518,17 @@ function checkPlayerHP() {
 
 function enemyTurn() {
     console.log("enemy turn");
-    if (enemyName = "Fire Slime") {
+    if (enemyName == "Fire Slime") {
         eFireAttack();
     } else if (enemyName = "Water Slime") {
         eWaterAttack();
-    } else if (enemyName = "Air Slime") {
+    } else if (enemyName == "Air Slime") {
         eAirAttack();
-    } else if (enemyName = "Ground Slime") {
+    } else if (enemyName == "Ground Slime") {
         eGroundAttack;
-    } else if (enemyName = "Anti-magic Treant") {
+    } else if (enemyName == "Anti-magic Treant") {
         eSlashAttack();
-    } else if (enemyName = "Armageddon") {
+    } else if (enemyName == "Armageddon") {
         eArmaAttack();
     }
 }
