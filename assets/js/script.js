@@ -219,6 +219,12 @@ function playerVictory() {
     <p>Thank you ${heroName}! You have vanquished this foe and made the kingdom just a little bit safer. However the seemingly eternal search must continue.</p>
     <button id="fight-on-button">Fight On ${heroName}!</button>
     </div>`;
+
+    let oldWins = document.getElementById("win-score").innerHTML;
+    document.getElementById("win-score").innerHTML = ++oldWins;
+
+    let fightOnButton = document.getElementById("fight-on-button");
+    fightOnButton.addEventListener("click", newFight);
 }
 
 // Add 1 to the player score and display message
