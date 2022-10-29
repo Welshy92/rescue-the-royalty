@@ -215,7 +215,7 @@ function enemyMove() {
 
 function playerVictory() {
     console.log("YOU WIN");
-    battleScreen.innerHTML = `<div id="End-screen">
+    battleScreen.innerHTML = `<div id="end-screen">
     <p>Thank you ${heroName}! You have vanquished this foe and made the kingdom just a little bit safer. However the seemingly eternal search must continue.</p>
     <button id="fight-on-button">Fight On ${heroName}!</button>
     </div>`;
@@ -231,8 +231,8 @@ function playerVictory() {
 
 function playerDefeat() {
     console.log("YOU LOSE");
-    battleScreen.innerHTML = `<div id="End-screen">
-    <p> ${heroName}, you fell unconcious and awaken many hours later. The enemy has disappeared and you feel healthy to fight again. The royalty must still be out there somewhere!.</p>
+    battleScreen.innerHTML = `<div id="end-screen">
+    <p> ${heroName}, you fell unconcious and woke up many hours later. The enemy has disappeared and you feel healthy enough to fight again. The royalty must still be out there somewhere!.</p>
     <button id="fight-on-button">Fight On ${heroName}!</button>
     </div>`;
 
@@ -359,7 +359,7 @@ function armageddon() {
     randomWeak = Math.floor(Math.random() * 5 + 1);
     randomResist = Math.floor(Math.random() * 5 + 1);
     
-    console.log(enemyHP, normal. weakness, resist);
+    console.log(enemyHP, normal, weakness, resist);
 } 
 // button event functions
 
@@ -466,6 +466,7 @@ function groundAttack(event) {
 
 function healAttack(event) {  
     console.log("HEALING");
+    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
         document.getElementById("player-hp-number").innerText = oldPlayerHP + 50;
         playerHP = oldPlayerHP + 50;
         console.log(playerHP);
