@@ -74,11 +74,11 @@ function startFight() {
 </div>
 <div id="move-log">
     <span id="enemy-last-move">
-        <p>Info on enemies turn.</p>
+        <p></p>
     </span>
     <span><img id="enemy-image" src="assets/images/f-slime.webp" alt="Fire Slime Enemy"></span>
     <span id="player-last-move">
-        <p>Info of players last turn.</p>
+        <p></p>
     </span>
 </div>
 <div id="player-abilities">
@@ -396,10 +396,13 @@ function slashAttack(event) {
     let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[4]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
+        document.getElementById("player-last-move").innerHTML = `<p>Critical strike! You hit the enemy for 40 damage.</p>`;
     } else if (resist === resistAttack[4]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
+        document.getElementById("player-last-move").innerHTML = `<p>Glancing blow! You hit the enemy for 10 damage.</p>`;
     } else {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
+        document.getElementById("player-last-move").innerHTML = `<p>You hit the enemy for 20 damage.</p>`;
     }
     checkEnemyHP();
 }
@@ -409,12 +412,16 @@ function fireAttack(event) {
     let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[3]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
+        document.getElementById("player-last-move").innerHTML = `<p>Incinerate! You hit the enemy for 40 damage.</p>`;
     } else if (resist === resistAttack[1]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
+        document.getElementById("player-last-move").innerHTML = `<p>Sputter! You hit the enemy for 10 damage.</p>`;
     } else if (nullify === nullifyAttack[0]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP;
+        document.getElementById("player-last-move").innerHTML = `<p>Your enemy laughes at you. You do 0 damage.</p>`;
     } else {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
+        document.getElementById("player-last-move").innerHTML = `<p>You hit the enemy for 20 damage.</p>`;
     }
     checkEnemyHP();
 }
@@ -424,12 +431,16 @@ function waterAttack(event) {
     let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[0]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
+        document.getElementById("player-last-move").innerHTML = `<p>Doused! You hit the enemy for 40 damage.</p>`;
     } else if (resist === resistAttack[2]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
+        document.getElementById("player-last-move").innerHTML = `<p>Dampened! You hit the enemy for 10 damage.</p>`;
     } else if (nullify === nullifyAttack[1]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP;
+        document.getElementById("player-last-move").innerHTML = `<p>The liquid drips off of your foe. You do 0 damage.</p>`;
     } else {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
+        document.getElementById("player-last-move").innerHTML = `<p>You hit the enemy for 20 damage.</p>`;
     }
     checkEnemyHP();
 }
@@ -439,12 +450,16 @@ function airAttack(event) {
     let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[1]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
+        document.getElementById("player-last-move").innerHTML = `<p>Torn Asunder! You hit the enemy for 40 damage.</p>`;
     } else if (resist === resistAttack[3]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
+        document.getElementById("player-last-move").innerHTML = `<p>Levitate! You hit the enemy for 10 damage.</p>`;
     } else if (nullify === nullifyAttack[2]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP;
+        document.getElementById("player-last-move").innerHTML = `<p>The enemy is completely unflinching. You do 0 damage.</p>`;
     } else {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
+        document.getElementById("player-last-move").innerHTML = `<p>You hit the enemy for 20 damage.</p>`;
     }
     checkEnemyHP();
 }
@@ -454,12 +469,16 @@ function groundAttack(event) {
     let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
     if (weakness === weakAttack[2]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
+        document.getElementById("player-last-move").innerHTML = `<p>Supreme Gravity! You hit the enemy for 40 damage.</p>`;
     } else if (resist === resistAttack[0]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 10;
+        document.getElementById("player-last-move").innerHTML = `<p>The enemy stumbles. You hit the enemy for 10 damage.</p>`;
     } else if (nullify === nullifyAttack[3]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP;
+        document.getElementById("player-last-move").innerHTML = `<p>The enemies movement remains in sync. You do 0 damage.</p>`;
     } else {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 20;
+        document.getElementById("player-last-move").innerHTML = `<p>You hit the enemy for 20 damage.</p>`;
     }
     checkEnemyHP();
 }
@@ -468,6 +487,7 @@ function healAttack(event) {
     console.log("HEALING");
     let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
         document.getElementById("player-hp-number").innerText = oldPlayerHP + 50;
+        document.getElementById("player-last-move").innerHTML = `<p>You bathe in the light and heal for 50HP.</p>`;
         playerHP = oldPlayerHP + 50;
         console.log(playerHP);
         enemyTurn();
@@ -515,12 +535,15 @@ function eFireAttack() {
 
     if (playerWeakTo === "Fire") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
+        document.getElementById("enemy-last-move").innerHTML = `The enemy prey upon your weakness! They deal 40 damage.`;
         console.log("bonus enemy damage");
     } else if (playerResistTo === "Fire") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
+        document.getElementById("enemy-last-move").innerHTML = `You are braced for the enemy attack! They deal 10 damage.`;
         console.log("Less enemy damage");
     } else {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
+        document.getElementById("enemy-last-move").innerHTML = `The enemy strikes you for 20 damage.`;
         console.log("Normal enemy damage");
     }
     checkPlayerHP();
