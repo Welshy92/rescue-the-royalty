@@ -448,9 +448,7 @@ function groundAttack(event) {
     checkEnemyHP();
 }
 
-function healAttack(event) {
-    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
-    
+function healAttack(event) {  
     console.log("HEALING");
         document.getElementById("player-hp-number").innerText = oldPlayerHP + 50;
         playerHP = oldPlayerHP + 50;
@@ -461,7 +459,7 @@ function healAttack(event) {
 // Player and Enemy HP checks.
 
 function checkEnemyHP() {
-    if (parseInt(document.getElementById("enemy-hp-number").innerHTML) <= 0) {
+    if (parseInt(document.getElementById("enemy-hp-number").innerText) <= 0) {
         console.log("victory detected");
         playerVictory();
     } else {
@@ -471,7 +469,7 @@ function checkEnemyHP() {
 }
 
 function checkPlayerHP() {
-    if (parseInt(document.getElementById("player-hp-number")) <= 0) {
+    if (parseInt(document.getElementById("player-hp-number").innerHTML) <= 0) {
         playerDefeat();
     }
 }
@@ -480,4 +478,95 @@ function checkPlayerHP() {
 
 function enemyTurn() {
     console.log("enemy turn");
+    if (enemyName = "Fire Slime") {
+        eFireAttack();
+    } else if (enemyName = "Water Slime") {
+        eWaterAttack();
+    } else if (enemyName = "Air Slime") {
+        eAirAttack();
+    } else if (enemyName = "Ground Slime") {
+        eGroundAttack;
+    } else if (enemyName = "Anti-magic Treant") {
+        eSlashAttack();
+    } else if (enemyName = "Armageddon") {
+        eArmaAttack();
+    }
+}
+
+function eFireAttack() {
+    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerHTML);
+
+    if (playerWeakTo === "Fire") {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
+        console.log("bonus enemy damage");
+    } else if (playerResistTo === "Fire") {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
+        console.log("Less enemy damage");
+    } else {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
+        console.log("Normal enemy damage");
+    }
+    checkPlayerHP();
+}
+
+function eWaterAttack() {
+    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
+        
+    if (playerWeakTo === "Water") {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
+        console.log("bonus enemy damage");
+    } else if (playerResistTo === "Water") {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
+        console.log("Less enemy damage");
+    } else {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
+        console.log("Normal enemy damage");
+    }
+    checkPlayerHP();
+}
+
+function eAirAttack() {
+    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
+    
+    if (playerWeakTo === "Air") {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
+        console.log("bonus enemy damage");
+    } else if (playerResistTo === "Air") {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
+        console.log("Less enemy damage");
+    } else {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
+        console.log("Normal enemy damage");
+    }
+    checkPlayerHP();
+}
+
+function eGroundAttack() {
+    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
+    
+    if (playerWeakTo === "Fire") {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
+        console.log("bonus enemy damage");
+    } else if (playerResistTo === "Fire") {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
+        console.log("Less enemy damage");
+    } else {
+        document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
+        console.log("Normal enemy damage");
+    }
+    checkPlayerHP();
+}
+
+function eSlashAttack() {
+    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
+    document.getElementById("player-hp-number").innerText = oldPlayerHP - 30;
+    console.log("Normal enemy damage");
+    checkPlayerHP();
+}
+
+function eArmaAttack() {
+    let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
+    document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
+    console.log("Armageddon Damage");
+    checkPlayerHP();
 }
