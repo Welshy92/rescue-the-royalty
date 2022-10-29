@@ -1,6 +1,6 @@
 // Wait for the DOM to finish loading before perfoming any tasks.
 document.addEventListener ("DOMContentLoaded", function() {
-})
+});
 
 // Submitting a hero name will start the game.
 
@@ -11,7 +11,7 @@ function handleSubmit(event) {
     let userName = userForm.elements["user"].value;
 
     if (userName.length < 5) {
-        alert("Please make sure your hero name is at least 5 characters long")
+        alert("Please make sure your hero name is at least 5 characters long");
     } else {
         heroName.push(userForm.elements["user"].value);
         console.log("HERO NAME:", userName);
@@ -32,7 +32,7 @@ It resets the game area and sets the enemy the user faces,
 as well as randomising the player stats. */
 
 function battleStart() {
-    console.log("BATTLE STARTED!")
+    console.log("BATTLE STARTED!");
     selectEnemy();
     playerStats();
     playerHP = 100;
@@ -129,98 +129,98 @@ function startFight() {
 }
 // Selects a random enemy for the user to face.
 
-let enemyName = []
+let enemyName = [];
 
 function selectEnemy() {
     console.log("ENEMY SELECTED!")
     let enemyNum = Math.floor(Math.random() * 6 + 1);
-    console.log(enemyNum)
+    console.log(enemyNum);
     if (enemyNum === 1) {
-        console.log("Fire selected")
+        console.log("Fire selected");
         fireSlime();
     }
     else if (enemyNum === 2) {
-        console.log("Water selected")
+        console.log("Water selected");
         waterSlime();
     }
     else if (enemyNum === 3) {
-        console.log("Air selected")
+        console.log("Air selected");
         airSlime();
     }
     else if (enemyNum === 4) {
-        console.log("Ground selected")
+        console.log("Ground selected");
         groundSlime();
     }
     else if (enemyNum === 5) {
-        console.log("Tree selected")
+        console.log("Tree selected");
         treant();
     }
     else if (enemyNum === 6) {
-        console.log("Death selected")
+        console.log("Death selected");
         armageddon();
     }
 }
 // Pressing the new-fight button starts the game over
 
 function newFight() {
-    console.log("NEW FIGHT BEGINS!")
+    console.log("NEW FIGHT BEGINS!");
     battleStart();
 }
 
 // Pressing instructions-button will open up a box to show instructions
 
 function displayInstructions() {
-    console.log("SHOWING INSTRUCTIONS")
+    console.log("SHOWING INSTRUCTIONS");
 }
 
 // Pressing the close button will hide the instructions box.
 
 function closeInstructions() {
-    console.log("HIDING INSTRUCTIONS")
+    console.log("HIDING INSTRUCTIONS");
 }
 
 // Sets player HP and what happens when it hits 0.
 
-function playerHP() {
-    console.log("PLAYER HP")
+function playerHPCheck() {
+    console.log("PLAYER HP");
 }
 
 /* Calculates the players damage based on enemy weakness/resistance/nullify.
 Displays the attack on the screen to the player */
 
 function attackCalc() {
-    console.log("PLAYER ATTACK")
+    console.log("PLAYER ATTACK");
 }
 
 /* Calculates the enemies damage based onplayer weakness/resistance.
 Displays the attack on the screen to the player */
 
 function enemyAttack() {
-    console.log("ENEMY ATTACK")
+    console.log("ENEMY ATTACK");
 }
 
 // The box that shows the last move by the player.
 
 function lastMove() {
-    console.log("last move")
+    console.log("last move");
 }
 
 // The box that shows the last move by the enemy.
 
 function enemyMove() {
-    console.log("enemy move")
+    console.log("enemy move");
 }
 
 // Add 1 to the player score and display message
 
 function playerVictory() {
-    console.log("YOU WIN")
+    console.log("YOU WIN");
 }
 
 // Add 1 to the player score and display message
 
 function playerDefeat() {
-    console.log("YOU LOSE")
+    console.log("YOU LOSE");
 }
 
 // Randomly assign 1 weakness and 1 resistance to the player.
@@ -331,7 +331,7 @@ function armageddon() {
     weakness = weakAttack[randomWeak];
     resist = resistAttack[randomResist];
     randomWeak = Math.floor(Math.random() * 5 + 1);
-    randomResist = Math.floor(Math.random() * 5 + 1)
+    randomResist = Math.floor(Math.random() * 5 + 1);
     
     console.log(enemyHP, normal. weakness, resist);
 } 
@@ -352,13 +352,13 @@ function closeInfoButton(event) {
 /* Floating instruction box open and close */
 
 function instructionsBox() {
-    let infoFloat = document.getElementById("info-float")
+    let infoFloat = document.getElementById("info-float");
     console.log("FLOATING INFO BOX");
     infoFloat.style.display = "flex";
 }
 
 function closeInfoFloat() {
-    let infoFloat = document.getElementById("info-float")
+    let infoFloat = document.getElementById("info-float");
     console.log("CLOSING INFO BOX");
     infoFloat.style.display = "none";
 }
@@ -367,7 +367,7 @@ function closeInfoFloat() {
 
 function slashAttack(event) {
     console.log("SLASHING");
-    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[4]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[4]) {
@@ -380,7 +380,7 @@ function slashAttack(event) {
 
 function fireAttack(event) {
     console.log("FIRING");
-    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[3]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[1]) {
@@ -395,7 +395,7 @@ function fireAttack(event) {
 
 function waterAttack(event) {
     console.log("WATERING");
-    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[0]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[2]) {
@@ -410,7 +410,7 @@ function waterAttack(event) {
 
 function airAttack(event) {
     console.log("AIRING");
-    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText)
+    let oldEnemyHP = parseInt(document.getElementById("enemy-hp-number").innerText);
     if (weakness === weakAttack[1]) {
         document.getElementById("enemy-hp-number").innerText = oldEnemyHP - 40;
     } else if (resist === resistAttack[3]) {
@@ -444,7 +444,7 @@ function healAttack(event) {
     console.log("HEALING");
         document.getElementById("player-hp-number").innerText = oldPlayerHP + 50;
         playerHP = oldPlayerHP + 50;
-        console.log(playerHP)
+        console.log(playerHP);
         enemyTurn();
 }
 
@@ -465,3 +465,7 @@ function checkPlayerHP() {
 }
 
 // Enemy move
+
+function enemyTurn() {
+    console.log("enemy turn");
+}
