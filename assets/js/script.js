@@ -350,7 +350,7 @@ function treant() {
     resist = resistAttack[0] + " + " + resistAttack[1] + " + " + resistAttack[2] + " + " + resistAttack[3];
     damage = enemyDamage[4];
     weakness = weakAttack[4];
-    enemyImage = "f-slime";
+    enemyImage = "treant";
     console.log(enemyHP, weakness, resist, damage);
 } 
 
@@ -363,7 +363,7 @@ function armageddon() {
     resist = resistAttack[randomResist];
     randomWeak = Math.floor(Math.random() * 5 + 1);
     randomResist = Math.floor(Math.random() * 5 + 1);
-    enemyImage = "f-slime";
+    enemyImage = "arma";
     console.log(enemyHP, normal, weakness, resist);
 } 
 // button event functions
