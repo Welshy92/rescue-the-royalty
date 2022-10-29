@@ -340,7 +340,7 @@ function groundSlime() {
     resist = resistAttack[3];
     damage = enemyDamage[3];
     normal = normalAttack[3, 4];
-    enemyImage = "f-slime";
+    enemyImage = "g-slime";
     console.log(enemyHP, weakness, nullify, resist, damage, normal);
 } 
 
