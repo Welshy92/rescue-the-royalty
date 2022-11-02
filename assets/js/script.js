@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // Wait for the DOM to finish loading before perfoming any tasks.
 document.addEventListener ("DOMContentLoaded", function() {
 });
@@ -363,6 +365,10 @@ function armageddon() {
     resist = resistAttack[randomResist];
     randomWeak = Math.floor(Math.random() * 5 + 1);
     randomResist = Math.floor(Math.random() * 5 + 1);
+    while (randomResist == randomWeak) {
+        console.log("Rerolling Enemy resistance");
+        randomResist = Math.floor(Math.random() * 4 + 1);
+    }
     enemyImage = "arma";
     console.log(enemyHP, normal, weakness, resist);
 } 
@@ -623,3 +629,4 @@ function eArmaAttack() {
     console.log("Armageddon Damage");
     checkPlayerHP();
 }
+
