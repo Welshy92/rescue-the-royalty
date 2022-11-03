@@ -49,20 +49,36 @@ Rescue The Royalty at it's core is a very basic version of what you would expect
 ### **Colour Scheme**
  
 ![My original chosen colour scheme](/assets/images/colour-scheme.png)
+
+My colour scheme is inspired by the old CGA displays.
  
 ### **Typography**
  
 [Google fonts](https://fonts.google.com) was used for the following fonts:
+* Roboto Mono
+* SilkScreen
+
+[Font Awesome]() was used for the down arrow icons used.
  
 ### **Imagery** 
+
+All images were created by myself using [Pixilart](https://www.pixilart.com/welshynator)
+Footer icons modified from the associated websites logos by myself using Paint.NET. 
  
 ### **Wireframes**
  
 Wireframes created using Balsamiq. 
+
+![Wireframe for screen upon DOM loading](/assets/images/dom-load.png)
+![Wireframe for fight screen](/assets/images/fight-screen.png)
+![Wireframe for info box](/assets/images/info-box.png)
  
 ### **Features**
  
 ### **Future Implementations**
+
+* Add a game reset button that takes you back to the start screen and changes score back to 0 so the user doesn't need to fully refresh the page.
+* Add animation and optional sound/music to the game.
  
 ### **Accessibility**
  
@@ -82,7 +98,7 @@ HTML, CSS, Javascript
 * [Github](https://github.com) - To save and store all the files of the site.
 * [Gitpod](https://www.gitpod.io) - To write all the HTML, CSS and Javascript. Also used to write the README.
 * [Google Fonts](https://fonts.google.com) - To import the fonts used on the site.
-* [Font Awesome](https://fontawesome.com) - For the iconography of the site.
+* [Font Awesome](https://fontawesome.com) - For the down arrows used.
 * [OperaGX](https://www.opera.com/gx) - Dev Tools to troubleshoot and test features, solve issues with responsiveness and styling.
 * [Am I Responsive?](https://ui.dev/amiresponsive) - To show the website image on a variety of devices.
 * [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) - Chrome DevTool extension that I use on my OperaGX browser.
