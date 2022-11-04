@@ -630,3 +630,12 @@ function eArmaAttack() {
     checkPlayerHP();
 }
 
+/* Reset Game button will set the game screen and score back to the begining. */
+
+let resetButton = document.getElementById("reset-game-button");
+    resetButton.addEventListener("click", resetGame);
+
+function resetGame(event) {
+    document.getElementById("win-score").innerText = `0`;
+    document.getElementById("loss-score").innerText = `0`;
+}

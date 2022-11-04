@@ -72,6 +72,11 @@ color: rgb(255, 255, 255);
     justify-content: space-around;
     padding-top: 10px;
     padding-bottom: 25px;
+    align-items: center;
+}
+
+#reset-game-button {
+    height: 40px;
 }
 
 #win-score {
