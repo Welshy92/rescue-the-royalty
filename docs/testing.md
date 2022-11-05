@@ -1,6 +1,7 @@
 # **Rescue The Royalty - Testing**
  
-![Image from amiresponsive](/assets/testing-images/amiresponsive.png)
+![Image from amiresponsive](/assets/images/amiresponsive.png)
+
 Image from [Am I Responsive?](https://ui.dev/amiresponsive)
  
 [Rescue The Royalty live on GitHub Pages](https://welshy92.github.io/rescue-the-royalty/)

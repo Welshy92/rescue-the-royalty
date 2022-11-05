@@ -2,7 +2,8 @@
  
 Rescue The Royalty is a responsive browser based game created using Javascript.
  
-![Image from amiresponsive](/assets/testing-images/amiresponsive.png)
+![Image from amiresponsive](/assets/images/amiresponsive.png)
+
 Image from [Am I Responsive?](https://ui.dev/amiresponsive)
  
 [Rescue The Royalty live on GitHub Pages](https://welshy92.github.io/rescue-the-royalty/)
@@ -41,7 +42,7 @@ Rescue The Royalty at it's core is a very basic version of what you would expect
 #### Returning Visitor Goals
  
 * I want to further challenge myself.
-* I want to read the instructions again.
+* I want to view my hero or enemies stats.
 
 ***
 ## **Design**
@@ -77,14 +78,15 @@ Wireframes created using Balsamiq.
  
 ### **Future Implementations**
 
-* Add a game reset button that takes you back to the start screen and changes score back to 0 so the user doesn't need to fully refresh the page.
+* Add a game reset button that takes you back to the start screen so the user doesn't need to fully refresh the page.
 * Add animation and optional sound/music to the game.
  
 ### **Accessibility**
  
 While coding this site I have been mindful to ensure that the website is accessible and friendly. I have achieved this by:
-  * Using descriptive alt attributes on images all around the site.
+  * Using descriptive alt attributes on all images used.
   * Making sure that there is sufficient colour contrast throughout the entire site.
+  * Use semantic HTML where possible.
 ***
 ## **Technologies Used**
  
