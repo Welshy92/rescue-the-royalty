@@ -25,16 +25,21 @@ I used the OperaGX tools frequently to try and see problems and mess around with
  
 ## **Automated Testing**
 The HTML of the site was validated by [W3C Validator](https://validator.w3.org)
-![index.html validation](/assets/testing-images/index-html-valid.png)
+
+![index.html validation](/assets/images/index-html-valid.png)
 
 The CSS was also validated by [W3C Validator](https://jigsaw.w3.org/css-validator/)
-![CSS validation](/assets/testing-images/css-validation.png)
+
+![CSS validation](/assets/images/css-validation.png)
  
 Lighthouse tool powered by [PageSpeed Insights](https://web.dev/measure/) was used to test the performance, accessibility, best practices and SEO of the website.
-![index](/assets/testing-images/index-lighthouse.png)
+
+![index](/assets/images/index-lighthouse.png)
 
 The Javascript was verified using [JSHint](https://jshint.com)
+
 ![JSHint validation](/assets/images/jshint-test.png)
+
 The validator claims that 2 functions are unused however they are both used when opening and closing my information windows that displays during gameplay.
 
 ***
