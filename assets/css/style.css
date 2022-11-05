@@ -101,7 +101,7 @@ color: rgb(255, 255, 255);
 }
 
 #instructions {
-    font-family: 'Bitter', serif;
+    font-family: 'Roboto Mono', monospace;
     text-align: justify;
     padding-left: 10%;
     padding-right: 10%;
@@ -152,7 +152,12 @@ h2 {
 }
 
 h3 {
+    font-family: 'Roboto Mono', monospace;
     padding-bottom: 10px;
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Media queries to help things scale at high widths */
@@ -225,6 +230,14 @@ h3 {
     right: -20%;
 }
 
+#enemy-name {
+    font-family: 'Silkscreen', cursive;
+}
+
+#enemy-hp {
+    font-family: 'Silkscreen', cursive;
+}
+
 #game-area > #top-row-game > #enemy-info > #enemy-hp {
     width: 100px;
     height: 15px;
@@ -260,6 +273,14 @@ h3 {
 #game-area > #bottom-row-game > #player-info {
     position: relative;
     left: -20%;
+}
+
+#player-name {
+    font-family: 'Silkscreen', cursive;
+}
+
+#player-hp {
+    font-family: 'Silkscreen', cursive;
 }
 
 #game-area > #bottom-row-game > #player-info > #player-hp {
