@@ -47,12 +47,6 @@ The validator claims that 2 functions are unused however they are both used when
  
 A full spelling and grammar check of the content was complete by copying the code into Google Docs.
  
-### **Testing User Story**
- 
-#### **First time visitors**
- 
-#### **Returning visitors**
- 
 ### **Full Testing**
  
 Full testing was performed on the following devices:
@@ -70,8 +64,36 @@ Full testing was performed on the following devices:
 * My Sony Xperia 1 II. Android 12.
     * Google Chrome
     * OperaGX
- 
-Footer testing. A check to see that the positioning was correct on all screen sizes and to check to see that the social links were working and opening in a new tab.
+
+The following was tested;
+
+* Initial DOM loaded and page displays and scales base on screen size.
+
+* Form validation confirmed working and correctly displays hero name on the fight screen.
+
+* Instructions disappear as intended when the fights begin to clear clutter from the screen.
+
+* Enemy randomly selected.
+
+* Random stats for the player and, if selected, Armageddon.
+
+* All player attacks buttons work and deal correct damage to the enemy based on their resistance/weakness/nullify and the combat message displays correctly.
+
+* Player correctly takes damage based on their reandomly assigned resistance/weakness and the combat message displays correctly.
+
+* Player heal does not allow the player to go over 150HP and a seperate message shows for it.
+
+* Score correctly increments based on player victory or defeat.
+
+* Player defeat and victory screens both displaying and "fight on" button working correctly.
+
+* New fight button correctly starts a brand new fight.
+
+* Info button correctly displayed floating window with play and enemy stats showing correctly the for assosiated enemy + random rolls. The close button also works correctly.
+
+* Reset Score button correctly sets the scores back to 0 without interrupting gameplay.
+
+* Footer testing. A check to see that the positioning was correct on all screen sizes and to check to see that the social links were working and opening in a new tab.
 
  
 ## **Bugs**
