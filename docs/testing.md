@@ -72,6 +72,8 @@ The following was tested;
 
 * Form validation confirmed working and correctly displays hero name on the fight screen.
 
+![Form Validation gif](/assets/images/form-validation.gif)
+
 * Instructions disappear as intended when the fights begin to clear clutter from the screen.
 
 * Enemy randomly selected.
@@ -84,13 +86,21 @@ The following was tested;
 
 * Player heal does not allow the player to go over 150HP and a seperate message shows for it.
 
+![Max player HP](/assets/images/max-hp.png)
+
 * Score correctly increments based on player victory or defeat.
+
+![Victory Screen](/assets/images/victory-screen.png)
+
+![Defeat Screen](/assets/images/defeat-screen.png)
 
 * Player defeat and victory screens both displaying and "fight on" button working correctly.
 
 * New fight button correctly starts a brand new fight.
 
 * Info button correctly displayed floating window with play and enemy stats showing correctly the for assosiated enemy + random rolls. The close button also works correctly.
+
+![Info box](/assets/images/info-box-test.png)
 
 * Reset Score button correctly sets the scores back to 0 without interrupting gameplay.
 
@@ -115,3 +125,4 @@ The following was tested;
 
 ### **Known Bugs**
 
+No known bugs remaining.
