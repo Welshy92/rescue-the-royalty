@@ -63,7 +63,8 @@ My colour scheme is inspired by the old CGA displays.
  
 ### **Imagery** 
 
-All images were created by myself using [Pixilart](https://www.pixilart.com/welshynator)
+All images were created by myself using [Pixilart](https://www.pixilart.com/welshynator).
+
 Footer icons modified from the associated websites logos by myself using Paint.NET. 
  
 ### **Wireframes**
@@ -152,8 +153,18 @@ There are a few different sites that I used to learn the required skills to deve
 * [Stack Overflow](https://stackoverflow.com) - Used as my main search point after Slack to get the answers I needed.
 
 ### **Code Used**
+
+I have no copied any code from any source during this project.
  
 ### **Media**
+
+Footer icons modified using icons from:
+
+* [LinkedIn](https://www.linkedin.com)
+
+* [GitHub](https://github.com)
+
+* [PixilArt](https://www.pixilart.com)
  
 ### **Acknowledgments**
 
