@@ -420,8 +420,8 @@ function healAttack(event) {
         document.getElementById("player-hp-number").innerText = oldPlayerHP + 50;
         document.getElementById("player-last-move").innerHTML = `<p>You bathe in the light and heal for 50HP.</p>`;
         if (parseInt(document.getElementById("player-hp-number").innerText) >= 150) {
-            document.getElementById("player-hp-number").innerText = 150
-            document.getElementById("player-last-move").innerHTML = `<p>You call upon the light but it cannot allow you to surpass your 150HP maximum!.</p>`
+            document.getElementById("player-hp-number").innerText = 150;
+            document.getElementById("player-last-move").innerHTML = `<p>You call upon the light but it cannot allow you to surpass your 150HP maximum!.</p>`;
         }
         enemyTurn();
 }
@@ -447,12 +447,12 @@ function checkPlayerHP() {
 function enemyTurn() {
     if (enemyName == "Fire Slime") {
         eFireAttack();
-    } else if (enemyName = "Water Slime") {
+    } else if (enemyName == "Water Slime") {
         eWaterAttack();
     } else if (enemyName == "Air Slime") {
         eAirAttack();
     } else if (enemyName == "Ground Slime") {
-        eGroundAttack;
+        eGroundAttack();
     } else if (enemyName == "Anti-magic Treant") {
         eSlashAttack();
     } else if (enemyName == "Armageddon") {

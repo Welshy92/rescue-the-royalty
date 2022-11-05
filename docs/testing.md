@@ -33,6 +33,10 @@ The CSS was also validated by [W3C Validator](https://jigsaw.w3.org/css-validato
 Lighthouse tool powered by [PageSpeed Insights](https://web.dev/measure/) was used to test the performance, accessibility, best practices and SEO of the website.
 ![index](/assets/testing-images/index-lighthouse.png)
 
+The Javascript was verified using [JSHint](https://jshint.com)
+![JSHint validation](/assets/images/jshint-test.png)
+The validator claims that 2 functions are unused however they are both used when opening and closing my information windows that displays during gameplay.
+
 ***
 ## **Manual Testing**
  
