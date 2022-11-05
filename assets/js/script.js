@@ -544,15 +544,15 @@ function eFireAttack() {
 
     if (playerWeakTo === "Fire") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
-        document.getElementById("enemy-last-move").innerHTML = `The enemy prey upon your weakness! They deal 40 damage.`;
+        document.getElementById("enemy-last-move").innerText = `The enemy prey upon your weakness! They deal 40 damage.`;
         console.log("bonus enemy damage");
     } else if (playerResistTo === "Fire") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
-        document.getElementById("enemy-last-move").innerHTML = `You are braced for the enemy attack! They deal 10 damage.`;
+        document.getElementById("enemy-last-move").innerText = `You are braced for the enemy attack! They deal 10 damage.`;
         console.log("Less enemy damage");
     } else {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
-        document.getElementById("enemy-last-move").innerHTML = `The enemy strikes you for 20 damage.`;
+        document.getElementById("enemy-last-move").innerText = `The enemy strikes you for 20 damage.`;
         console.log("Normal enemy damage");
     }
     checkPlayerHP();
@@ -563,11 +563,11 @@ function eWaterAttack() {
         
     if (playerWeakTo === "Water") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
-        document.getElementById("enemy-last-move").innerHTML = `The enemy preys upon your weakness! They deal 40 damage.`;
+        document.getElementById("enemy-last-move").innerText = `The enemy preys upon your weakness! They deal 40 damage.`;
         console.log("bonus enemy damage");
     } else if (playerResistTo === "Water") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
-        document.getElementById("enemy-last-move").innerHTML = `You are braced for the enemy attack! They deal 10 damage.`;
+        document.getElementById("enemy-last-move").innerText = `You are braced for the enemy attack! They deal 10 damage.`;
         console.log("Less enemy damage");
     } else {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
@@ -581,15 +581,15 @@ function eAirAttack() {
     
     if (playerWeakTo === "Air") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
-        document.getElementById("enemy-last-move").innerHTML = `The enemy preys upon your weakness! They deal 40 damage.`;
+        document.getElementById("enemy-last-move").innerText = `The enemy preys upon your weakness! They deal 40 damage.`;
         console.log("bonus enemy damage");
     } else if (playerResistTo === "Air") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
-        document.getElementById("enemy-last-move").innerHTML = `You are braced for the enemy attack! They deal 10 damage.`;
+        document.getElementById("enemy-last-move").innerText = `You are braced for the enemy attack! They deal 10 damage.`;
         console.log("Less enemy damage");
     } else {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
-        document.getElementById("enemy-last-move").innerHTML = `The enemy strikes you for 20 damage.`;
+        document.getElementById("enemy-last-move").innerText = `The enemy strikes you for 20 damage.`;
         console.log("Normal enemy damage");
     }
     checkPlayerHP();
@@ -600,15 +600,15 @@ function eGroundAttack() {
     
     if (playerWeakTo === "Ground") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
-        document.getElementById("enemy-last-move").innerHTML = `The enemy preys upon your weakness! They deal 40 damage.`;
+        document.getElementById("enemy-last-move").innerText = `The enemy preys upon your weakness! They deal 40 damage.`;
         console.log("bonus enemy damage");
     } else if (playerResistTo === "Ground") {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 10;
-        document.getElementById("enemy-last-move").innerHTML = `You are braced for the enemy attack! They deal 10 damage.`;
+        document.getElementById("enemy-last-move").innerText = `You are braced for the enemy attack! They deal 10 damage.`;
         console.log("Less enemy damage");
     } else {
         document.getElementById("player-hp-number").innerText = oldPlayerHP - 20;
-        document.getElementById("enemy-last-move").innerHTML = `The enemy strikes you for 20 damage.`;
+        document.getElementById("enemy-last-move").innerText = `The enemy strikes you for 20 damage.`;
         console.log("Normal enemy damage");
     }
     checkPlayerHP();
@@ -617,7 +617,7 @@ function eGroundAttack() {
 function eSlashAttack() {
     let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
     document.getElementById("player-hp-number").innerText = oldPlayerHP - 30;
-    document.getElementById("enemy-last-move").innerHTML = `The enemy slams you for 30 damage.`;
+    document.getElementById("enemy-last-move").innerText = `The enemy slams you for 30 damage.`;
     console.log("Normal enemy damage");
     checkPlayerHP();
 }
@@ -625,7 +625,7 @@ function eSlashAttack() {
 function eArmaAttack() {
     let oldPlayerHP = parseInt(document.getElementById("player-hp-number").innerText);
     document.getElementById("player-hp-number").innerText = oldPlayerHP - 40;
-    document.getElementById("enemy-last-move").innerHTML = `The enemy preys upon your weakness! They deal 40 damage.`;
+    document.getElementById("enemy-last-move").innerText = `The enemy preys upon your weakness! They deal 40 damage.`;
     console.log("Armageddon Damage");
     checkPlayerHP();
 }
