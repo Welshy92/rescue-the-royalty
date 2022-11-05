@@ -79,6 +79,7 @@ Footer testing. A check to see that the positioning was correct on all screen si
 
 * Player could get assinged the same element for resistance and weakness. Added a while loop to reroll resistance when they are equal.
 
+* Some enemy attacks displayed no text due to using innerHTML instead of innerText. Now corrected.
+
 ### **Known Bugs**
 
-Enemy and Player HP bars do not show. Div size is showing as 0x0 on page despite dev tools stating differently.
