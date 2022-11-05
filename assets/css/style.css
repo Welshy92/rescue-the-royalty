@@ -102,7 +102,14 @@ color: rgb(255, 255, 255);
 
 #instructions {
     font-family: 'Bitter', serif;
-    text-align: center;
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#instruct-text {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #type-chart {
@@ -150,7 +157,6 @@ footer {
 
 @media screen and (min-width: 550px) {
     #type-img {
-        width: 75%;
         max-height: 500px;
         object-fit: contain;
     }
@@ -162,12 +168,29 @@ footer {
 
 /* Media queries to help things scale at low widths */
 
+@media screen and (max-width: 350px) {
+    .social {
+        width: 30px;
+        height: 30px;
+    }
+
+    #footer {
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     #game-area {
         max-width: 95%;
         width: 95%;
         margin: 1px;
         padding: 5px;
+    }
+
+    #instruct-text {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 @media screen and (max-width: 520px) {
