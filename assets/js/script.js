@@ -129,7 +129,6 @@ let enemyName = [];
  
 function selectEnemy() {
     let enemyNum = Math.floor(Math.random() * 6 + 1);
-    console.log(enemyNum);
     if (enemyNum === 1) {
         fireSlime();
     }
