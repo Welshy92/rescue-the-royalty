@@ -3,13 +3,13 @@
 Rescue The Royalty is a responsive browser based game created using Javascript.
  
 ![Image from amiresponsive](/assets/images/amiresponsive.png)
-
+ 
 Image from [Am I Responsive?](https://ui.dev/amiresponsive)
  
 [Rescue The Royalty live on GitHub Pages](https://welshy92.github.io/rescue-the-royalty/)
  
 ## **CONTENTS**
-
+ 
 * [User Experience (UX)](#user-experience-ux)
 * [Design](#design)
 * [Technologies Used](#technologies-used)
@@ -22,35 +22,35 @@ Image from [Am I Responsive?](https://ui.dev/amiresponsive)
  
 ### Initial Discussion
  
-Rescue The Royalty at it's core is a very basic version of what you would expect to see in the combat of a classic turn based JRPG game. It contains a few basic mechancis, such as HP, various attacks (some can do double, half or no damage at all dependant on the enemy the user faces), and a basic healing spell. The aim is using a combination of attacks and healing to defeat the enemy before it defeats you. The game contains various random elements to keep the playing guessing and offer some replayablility.
+Rescue The Royalty at its core is a very basic version of what you would expect to see in the combat of a classic turn based JRPG game. It contains a few basic mechanics, such as HP, various attacks (some can do double, half or no damage at all depending on the enemy the user faces), and a basic healing spell. The aim is using a combination of attacks and healing to defeat the enemy before it defeats you. The game contains various random elements to keep the player guessing and offer some replayability.
  
 ### **User Stories**
  
 #### Client Goals
-
+ 
 * To be able to view and interact with the site on multiple different devices.
-* To have the need for strategising their choices to win the fights.
+* To have the need for strategizing their choices to win the fights.
 * To be able to see how many wins or defeats they have during their current play session.
 * To be able to view the enemy and hero stats during combat.
  
 #### First Time Visitor Goals
-
-* I want to know how the game works. 
+ 
+* I want to know how the game works.
 * I want to test my strategic mind.
 * I want to know how best to defeat my enemies.
-
+ 
 #### Returning Visitor Goals
  
 * I want to further challenge myself.
 * I want to view my hero or enemies stats.
-
+ 
 ***
 ## **Design**
  
 ### **Colour Scheme**
  
 ![My original chosen colour scheme](/assets/images/colour-scheme.png)
-
+ 
 My colour scheme is inspired by the old CGA displays.
  
 ### **Typography**
@@ -58,19 +58,19 @@ My colour scheme is inspired by the old CGA displays.
 [Google fonts](https://fonts.google.com) was used for the following fonts:
 * Roboto Mono
 * SilkScreen
-
+ 
 [Font Awesome]() was used for the down arrow icons used.
  
-### **Imagery** 
-
+### **Imagery**
+ 
 All images were created by myself using [Pixilart](https://www.pixilart.com/welshynator).
-
-Footer icons modified from the associated websites logos by myself using Paint.NET. 
+ 
+Footer icons modified from the associated websites logos by myself using Paint.NET.
  
 ### **Wireframes**
  
-Wireframes created using Balsamiq. 
-
+Wireframes created using Balsamiq.
+ 
 ![Wireframe for screen upon DOM loading](/assets/images/dom-load.png)
 ![Wireframe for fight screen](/assets/images/fight-screen.png)
 ![Wireframe for info box](/assets/images/info-box.png)
@@ -78,7 +78,7 @@ Wireframes created using Balsamiq.
 ### **Features**
  
 ### **Future Implementations**
-
+ 
 * Add a game reset button that takes you back to the start screen so the user doesn't need to fully refresh the page.
 * Add animation and optional sound/music to the game.
  
@@ -151,23 +151,22 @@ There are a few different sites that I used to learn the required skills to deve
 * Code Institute Slack - Used to get answers for specific queries.
 * [w3Schools](https://www.w3schools.com) - Used to double check some syntax for both CSS and Javascript.
 * [Stack Overflow](https://stackoverflow.com) - Used as my main search point after Slack to get the answers I needed.
-
+ 
 ### **Code Used**
-
-I have no copied any code from any source during this project.
+ 
+I have not copied any code from any source during this project.
  
 ### **Media**
-
+ 
 Footer icons modified using icons from:
-
+ 
 * [LinkedIn](https://www.linkedin.com)
-
+ 
 * [GitHub](https://github.com)
-
+ 
 * [PixilArt](https://www.pixilart.com)
  
 ### **Acknowledgments**
-
-* Bim williams - Assisting me with an event listener bug I was trying to fix.
-* August 2022 Code Institute Cohorts - Keeping me sane and motivated.
  
+* Bim Williams - Assisting me with an event listener bug I was trying to fix.
+* August 2022 Code Institute Cohorts - Keeping me sane and motivated.
