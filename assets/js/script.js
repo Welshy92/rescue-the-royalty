@@ -60,7 +60,6 @@ function startFight() {
 </div>
 <div id="info-float">
 <p>${enemyName}</p>
-<p>LORE PIECE</p>
 <p>Enemy weakness: ${weakness}</p>
 <p>Enemy resistance: ${resist}</p>
 <p>Enemy nullification: ${nullify}</p>
